@@ -354,15 +354,20 @@
       
         
           
-            <h3 id="关于python3和python2"><a href="#关于python3和python2" class="headerlink" title="关于python3和python2:"></a>关于python3和python2:</h3><pre><code>其中python开发者说过python2版本会在近几年淘汰掉,所以我们现在学习python首当其冲可定是安装python3。
+            <h3 id="关于python3和python2"><a href="#关于python3和python2" class="headerlink" title="关于python3和python2:"></a>关于python3和python2:</h3><pre><code>其中python开发者说过python2版本会在近几年淘汰掉,所以我们现在学习python首当其冲可定是安
+装python3。
 </code></pre><hr>
 <h3 id="python3环境变量配置："><a href="#python3环境变量配置：" class="headerlink" title="python3环境变量配置："></a>python3环境变量配置：</h3><ol>
 <li>python安装包路径添加到path变量中</li>
 <li>python安装目录下的Scripts路径添加到path中(不配这个pip3工具用不了)</li>
 </ol>
 <hr>
-<h3 id="关于pip"><a href="#关于pip" class="headerlink" title="关于pip:"></a>关于pip:</h3><pre><code>pip是一个现代的，通用的python包管理工具。提供了对python包的查找，下载，安装，卸载的功能。其中pip一般指python2的安装工具，而pip3则是python3的工具
-在Windows系统下，如果你安装的是python2，那么你的工具就是pip，如果安装的是python3，那么你既有pip，又有pip3工具。使用pip安装库的话会安装到python2.X\site-packages里面，使用pip3的话会安装在python3.X\site-packages，如果你的电脑只安装了python3，效果其实是一样的，但还是建议使用python3的pip3工具安装。
+<h3 id="关于pip"><a href="#关于pip" class="headerlink" title="关于pip:"></a>关于pip:</h3><pre><code>pip是一个现代的，通用的python包管理工具。提供了对python包的查找，下载，安装，卸载的功能。
+其中pip一般指python2的安装工具，而pip3则是python3的工具
+在Windows系统下，如果你安装的是python2，那么你的工具就是pip，如果安装的是python3，那么你
+既有pip，又有pip3工具。使用pip安装库的话会安装到python2.X\site-packages里面，使用pip3的话
+会安装在python3.X\site-packages，如果你的电脑只安装了python3，效果其实是一样的，但还是建
+议使用python3的pip3工具安装。
 </code></pre><hr>
 <h3 id="pip安装库文件"><a href="#pip安装库文件" class="headerlink" title="pip安装库文件:"></a>pip安装库文件:</h3><pre><code>命令格式：pip3 install xxx(库名称)
 如现在比较常用的一些库：
@@ -370,7 +375,7 @@
 </code></pre><hr>
 <h3 id="requests库简单介绍"><a href="#requests库简单介绍" class="headerlink" title="requests库简单介绍:"></a>requests库简单介绍:</h3><pre><code>代码示例：
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">	def getHTMLText(url):</span><br><span class="line">		try:</span><br><span class="line">			r = requests.get(url, timeout = 30)</span><br><span class="line">			r.raise_for_status()</span><br><span class="line">			r.encoding = r.apparent_encoding</span><br><span class="line">			return r.text</span><br><span class="line">		except:</span><br><span class="line">			return &quot;产生异常&quot;</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	url = &quot;http://www.baidu.com&quot;</span><br><span class="line">	print(getHTMLText(url))</span><br></pre></td></tr></table></figure>
-</code></pre><p>运行结果:<br><a href="/images/pc.png">!运行结果</a></p>
+</code></pre><p>运行结果:<br><img src="/images/pc.png" alt="运行结果" title="运行结果"></p>
 
           
         
@@ -630,9 +635,9 @@
 <p>以上三个工具建议去官网下：<a href="http://www.mingw.org/" target="_blank">MinGW</a>，<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">jdk</a>，<a href="https://www.python.org/downloads/" target="_blank">python</a>。</p>
 <p>2.安装：正常安装就行，MinGW选择组件时选择C++的（python注意勾选add to path）。</p>
 <p>3.配置环境：右击我的电脑-属性-高级系统设置-环境变量，然后找到path（用户变量和系统变量都行），然后点击新建，</p>
-<pre><code>(1):(C++): 把MinGW 的bin路径和lib路径copy到变量值那行。
+<pre><code>1. (C++): 把MinGW 的bin路径和lib路径copy到变量值那行。
 
-(2):(java):把jdk和jre(如果一起安装了的话，没有就不用，jdk是一定要的)的bin路径copy到变量值那行，再自己新建一个classpath的变量，变量值为.;加上自己的jdk的lib路径再加上jdk的lib路径下再加上\tools.jar完成，表达的可能有些不清楚，看看我的示例把：
+2. (java):把jdk和jre(如果一起安装了的话，没有就不用，jdk是一定要的)的bin路径copy到变量值那行，再自己新建一个classpath的变量，变量值为.;加上自己的jdk的lib路径再加上jdk的lib路径下再加上\tools.jar完成，表达的可能有些不清楚，看看我的示例把：
 </code></pre><p><b><center>.;E:\jdk10\jdk\lib;E:\jdk10\jdk\lib\tools.jar</center></b></p>
 <pre><code>(3):python:之前安装的时候就自动配置好了。
 </code></pre><p>注意不同的路径之间用;隔开。</p>
@@ -765,7 +770,7 @@
 <p><strong>clock()</strong>是C/C++中的计时函数，而与其相关的数据类型是<strong>clock_t</strong>。在MSDN中，查得对clock函数定义如下：<strong>clock_t clock(void)</strong> ;</p>
 <p>简单而言，就是该程序从启动到函数调用占用CPU的时间。这个函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之间的CPU时钟计时单元（clock tick）数，在MSDN中称之为挂钟时间（wal-clock）；若挂钟时间不可取，则返回-1。其中clock_t是用来保存时间的数据类型，clock_t实质是头文件中long数据类型类型定义的一个代称。使用计时很简单，只要在程序想计时的地方放入一个clock()函数，另外在结束地方放置一个clock()函数，两个返回值的差即是程序消耗时间。但是该函数计时是以毫秒（ms）为单位的，也就是没过千分之一秒加一，所以需要除以一个常量1000才是以秒计时的，一般使用头文件中声明好的常量CLOCKS_PRE_SEC（即1000）。</p>
 <p>测试程序如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdlib&gt;</span><br><span class="line">#include&lt;ctime&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">clock_t start,end;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">	start=clock();		//程序开始计时</span><br><span class="line">	int ans=0;</span><br><span class="line">	for(int i=1;i&lt;=1e8;i++)</span><br><span class="line">		ans++;</span><br><span class="line">	end=clock();		//程序结束用时</span><br><span class="line">	double endtime=(double)(end-start)/CLOCKS_PER_SEC;</span><br><span class="line">	cout&lt;&lt;&quot;Total time:&quot;&lt;&lt;endtime&lt;&lt;endl;		//s为单位</span><br><span class="line">	cout&lt;&lt;&quot;Total time:&quot;&lt;&lt;endtime*1000&lt;&lt;&quot;ms&quot;&lt;&lt;endl;	//ms为单位</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行截图：<br><img src="images\time.png" alt="运行结果" title="运行结果"><br>用<strong>double</strong>强转是为了更精确，不然不足1秒的会显示0s。</p>
+<p>运行截图：<br><img src="/images/time.png" alt="运行结果" title="运行结果"><br>用<strong>double</strong>强转是为了更精确，不然不足1秒的会显示0s。</p>
 
           
         
@@ -1038,7 +1043,7 @@
 <p><strong>erase(it)</strong>:删除迭代器指针it处元素.</p>
 <p><strong>insert()</strong>:插入某个元素.</p>
 <p>代码演示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;queue&gt;</span><br><span class="line">#include &lt;set&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">    set&lt;int&gt;s;</span><br><span class="line">    for(int i=1;i&lt;=10;i++) s.insert(i);</span><br><span class="line">    cout&lt;&lt;s.size()&lt;&lt;endl; </span><br><span class="line">    cout&lt;&lt;s.max_size()&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;*s.begin()&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;*s.end()&lt;&lt;endl;</span><br><span class="line">    set&lt;int&gt;::iterator it;</span><br><span class="line">    for(it=s.begin();it!=s.end();it++)&#123;</span><br><span class="line">		cout&lt;&lt;*it&lt;&lt;&apos; &apos;;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	if (s.count(1)) cout&lt;&lt;&quot;1在set容器里&quot;&lt;&lt;endl;</span><br><span class="line">    pair&lt;set&lt;int&gt;::const_iterator,set&lt;int&gt;::const_iterator&gt; pr;</span><br><span class="line">    pr=s.equal_range(3);</span><br><span class="line">    cout&lt;&lt;&quot;第一个大于等于3的数是:&quot;&lt;&lt;*pr.first&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;第一个大于3的数是&quot;&lt;&lt;*pr.second&lt;&lt;endl;</span><br><span class="line">	set&lt;int&gt;::iterator first;</span><br><span class="line">	set&lt;int&gt;::iterator second;</span><br><span class="line">	s.erase(s.begin());</span><br><span class="line">	first=s.begin();</span><br><span class="line">	second=first;</span><br><span class="line">	second++;second++;</span><br><span class="line">	s.erase(first,second);</span><br><span class="line">	cout&lt;&lt;&quot;删除后set中元素有:&quot;&lt;&lt;endl;</span><br><span class="line">	for(it=s.begin();it!=s.end();it++)</span><br><span class="line">		cout&lt;&lt;*it&lt;&lt;&quot; &quot;;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行截图：<br><a href="/images/set.png" title="运行结果">!运行结果</a></p>
+<p>运行截图：<br><img src="/images/set.png" alt="运行结果" title="运行结果"></p>
 <p>再来补上一个今天用set做的题：</p>
 <p>传送门：<a href="http://codeforces.com/contest/975/problem/A" target="_blank">Aramic script</a></p>
 <p>题目大概意思是：给你n个字符串，每个字符串的根定义为去掉字符串里重复的字符后剩下的字符构成的字符串，不管顺序，问最后有多少个根字符串？</p>

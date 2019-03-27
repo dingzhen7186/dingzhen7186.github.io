@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="blog of coderdz">
 <meta property="og:description" content="vim是一个强大的代码编辑器，强大之处我就不多说了，大家可以自己去百度(被称为上古神器)，既然是一个编辑器，那么他干的功能就只能是写代码，运行环境得自己配置。下面说说具体如何配置： 1.下载： 首先在电脑安装MinGW（C/C++编译工具），jdk（java开发工具包，里面含java运行环境和java工具），python（安装时注意直接勾选add to path后面就不用配置了） 以上三个工具建议">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T11:06:19.819Z">
+<meta property="og:updated_time" content="2019-03-27T13:53:31.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim配置C&#x2F;C++,java,python运行环境">
 <meta name="twitter:description" content="vim是一个强大的代码编辑器，强大之处我就不多说了，大家可以自己去百度(被称为上古神器)，既然是一个编辑器，那么他干的功能就只能是写代码，运行环境得自己配置。下面说说具体如何配置： 1.下载： 首先在电脑安装MinGW（C/C++编译工具），jdk（java开发工具包，里面含java运行环境和java工具），python（安装时注意直接勾选add to path后面就不用配置了） 以上三个工具建议">
@@ -360,9 +360,9 @@
 <p>以上三个工具建议去官网下：<a href="http://www.mingw.org/" target="_blank">MinGW</a>，<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">jdk</a>，<a href="https://www.python.org/downloads/" target="_blank">python</a>。</p>
 <p>2.安装：正常安装就行，MinGW选择组件时选择C++的（python注意勾选add to path）。</p>
 <p>3.配置环境：右击我的电脑-属性-高级系统设置-环境变量，然后找到path（用户变量和系统变量都行），然后点击新建，</p>
-<pre><code>(1):(C++): 把MinGW 的bin路径和lib路径copy到变量值那行。
+<pre><code>1. (C++): 把MinGW 的bin路径和lib路径copy到变量值那行。
 
-(2):(java):把jdk和jre(如果一起安装了的话，没有就不用，jdk是一定要的)的bin路径copy到变量值那行，再自己新建一个classpath的变量，变量值为.;加上自己的jdk的lib路径再加上jdk的lib路径下再加上\tools.jar完成，表达的可能有些不清楚，看看我的示例把：
+2. (java):把jdk和jre(如果一起安装了的话，没有就不用，jdk是一定要的)的bin路径copy到变量值那行，再自己新建一个classpath的变量，变量值为.;加上自己的jdk的lib路径再加上jdk的lib路径下再加上\tools.jar完成，表达的可能有些不清楚，看看我的示例把：
 </code></pre><p><b><center>.;E:\jdk10\jdk\lib;E:\jdk10\jdk\lib\tools.jar</center></b></p>
 <pre><code>(3):python:之前安装的时候就自动配置好了。
 </code></pre><p>注意不同的路径之间用;隔开。</p>

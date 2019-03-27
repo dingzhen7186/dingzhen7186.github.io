@@ -86,12 +86,12 @@
 <meta property="og:site_name" content="blog of coderdz">
 <meta property="og:description" content="在C/C++中有可以直接测试程序运行时间的函数，在&amp;lt;time.h&amp;gt;/头文件中，非常方便和实用。 clock()是C/C++中的计时函数，而与其相关的数据类型是clock_t。在MSDN中，查得对clock函数定义如下：clock_t clock(void) ; 简单而言，就是该程序从启动到函数调用占用CPU的时间。这个函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://dingzhen7186.github.io/2019/03/27/C-C-程序计时函数/images/time.png">
-<meta property="og:updated_time" content="2019-03-27T10:59:06.874Z">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/time.png">
+<meta property="og:updated_time" content="2019-03-27T13:48:45.259Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C&#x2F;C++程序计时函数">
 <meta name="twitter:description" content="在C/C++中有可以直接测试程序运行时间的函数，在&amp;lt;time.h&amp;gt;/头文件中，非常方便和实用。 clock()是C/C++中的计时函数，而与其相关的数据类型是clock_t。在MSDN中，查得对clock函数定义如下：clock_t clock(void) ; 简单而言，就是该程序从启动到函数调用占用CPU的时间。这个函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之">
-<meta name="twitter:image" content="http://dingzhen7186.github.io/2019/03/27/C-C-程序计时函数/images/time.png">
+<meta name="twitter:image" content="http://dingzhen7186.github.io/images/time.png">
 
 
 
@@ -361,7 +361,7 @@
 <p><strong>clock()</strong>是C/C++中的计时函数，而与其相关的数据类型是<strong>clock_t</strong>。在MSDN中，查得对clock函数定义如下：<strong>clock_t clock(void)</strong> ;</p>
 <p>简单而言，就是该程序从启动到函数调用占用CPU的时间。这个函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之间的CPU时钟计时单元（clock tick）数，在MSDN中称之为挂钟时间（wal-clock）；若挂钟时间不可取，则返回-1。其中clock_t是用来保存时间的数据类型，clock_t实质是头文件中long数据类型类型定义的一个代称。使用计时很简单，只要在程序想计时的地方放入一个clock()函数，另外在结束地方放置一个clock()函数，两个返回值的差即是程序消耗时间。但是该函数计时是以毫秒（ms）为单位的，也就是没过千分之一秒加一，所以需要除以一个常量1000才是以秒计时的，一般使用头文件中声明好的常量CLOCKS_PRE_SEC（即1000）。</p>
 <p>测试程序如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdlib&gt;</span><br><span class="line">#include&lt;ctime&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">clock_t start,end;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">	start=clock();		//程序开始计时</span><br><span class="line">	int ans=0;</span><br><span class="line">	for(int i=1;i&lt;=1e8;i++)</span><br><span class="line">		ans++;</span><br><span class="line">	end=clock();		//程序结束用时</span><br><span class="line">	double endtime=(double)(end-start)/CLOCKS_PER_SEC;</span><br><span class="line">	cout&lt;&lt;&quot;Total time:&quot;&lt;&lt;endtime&lt;&lt;endl;		//s为单位</span><br><span class="line">	cout&lt;&lt;&quot;Total time:&quot;&lt;&lt;endtime*1000&lt;&lt;&quot;ms&quot;&lt;&lt;endl;	//ms为单位</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行截图：<br><img src="images\time.png" alt="运行结果" title="运行结果"><br>用<strong>double</strong>强转是为了更精确，不然不足1秒的会显示0s。</p>
+<p>运行截图：<br><img src="/images/time.png" alt="运行结果" title="运行结果"><br>用<strong>double</strong>强转是为了更精确，不然不足1秒的会显示0s。</p>
 
       
     </div>
