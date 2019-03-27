@@ -283,6 +283,675 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/pip以及python常用库的安装介绍/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coderdz">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/Ashin.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of coderdz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/pip以及python常用库的安装介绍/" itemprop="url">pip以及python常用库的安装介绍</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T19:11:44+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="关于python3和python2"><a href="#关于python3和python2" class="headerlink" title="关于python3和python2:"></a>关于python3和python2:</h3><pre><code>其中python开发者说过python2版本会在近几年淘汰掉,所以我们现在学习python首当其冲可定是安装python3。
+</code></pre><hr>
+<h3 id="python3环境变量配置："><a href="#python3环境变量配置：" class="headerlink" title="python3环境变量配置："></a>python3环境变量配置：</h3><ol>
+<li>python安装包路径添加到path变量中</li>
+<li>python安装目录下的Scripts路径添加到path中(不配这个pip3工具用不了)</li>
+</ol>
+<hr>
+<h3 id="关于pip"><a href="#关于pip" class="headerlink" title="关于pip:"></a>关于pip:</h3><pre><code>pip是一个现代的，通用的python包管理工具。提供了对python包的查找，下载，安装，卸载的功能。其中pip一般指python2的安装工具，而pip3则是python3的工具
+在Windows系统下，如果你安装的是python2，那么你的工具就是pip，如果安装的是python3，那么你既有pip，又有pip3工具。使用pip安装库的话会安装到python2.X\site-packages里面，使用pip3的话会安装在python3.X\site-packages，如果你的电脑只安装了python3，效果其实是一样的，但还是建议使用python3的pip3工具安装。
+</code></pre><hr>
+<h3 id="pip安装库文件"><a href="#pip安装库文件" class="headerlink" title="pip安装库文件:"></a>pip安装库文件:</h3><pre><code>命令格式：pip3 install xxx(库名称)
+如现在比较常用的一些库：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pip3 install numpy(机器学习的一个计算数值库)</span><br><span class="line">pip3 install pandas(数据分析)</span><br><span class="line">pip3 install matploblib(python强大的绘图库)</span><br><span class="line">pip3 install requests(最热门的爬虫库之一)</span><br><span class="line">pip3 list (显示pip3安装的所有库列表)</span><br></pre></td></tr></table></figure>
+</code></pre><hr>
+<h3 id="requests库简单介绍"><a href="#requests库简单介绍" class="headerlink" title="requests库简单介绍:"></a>requests库简单介绍:</h3><pre><code>代码示例：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">	def getHTMLText(url):</span><br><span class="line">		try:</span><br><span class="line">			r = requests.get(url, timeout = 30)</span><br><span class="line">			r.raise_for_status()</span><br><span class="line">			r.encoding = r.apparent_encoding</span><br><span class="line">			return r.text</span><br><span class="line">		except:</span><br><span class="line">			return &quot;产生异常&quot;</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	url = &quot;http://www.baidu.com&quot;</span><br><span class="line">	print(getHTMLText(url))</span><br></pre></td></tr></table></figure>
+</code></pre><p>运行结果:<br><a href="/images/pc.png">!运行结果</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/浅谈python中的全局变量和局部变量/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coderdz">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/Ashin.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of coderdz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/浅谈python中的全局变量和局部变量/" itemprop="url">浅谈python中的全局变量和局部变量~</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T19:08:43+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在被调用函数内赋值的变元和变量，处于该函数的“<strong>局部作用域</strong>”。在所有函数之外赋值的变量，属于“<strong>全局作用域</strong>”。处于局部作用域的变量，被称为“<strong>局部变量</strong>”。处于全局作用域的变量，被称为“<strong>全局变量</strong>”。一个变量必是其中一种，<strong>不能既是局部的又是全局的。</strong><br>可以将“作用域”看成是变量的容器。当作用域被销毁时，所有保存在该作用域内的变量的值就被丢弃了。只有一个全局作用域，它是在程序开始时创建的。如果程序终止，全局作用域就被销毁，它的所有变量就被丢弃了。否则，下次你运行程序的时候，这些变量就会记住它们上次运行时的值。一个函数被调用时，就创建了一个局部作用域。在这个函数内赋值的所有变量，存在于该局部作用域内。该函数返回时，这个局部作用域就被销毁了，这些变量就丢失了。下次调用这个函数，局部变量不会记得该函数上次被调用时它们保存的值。<br>作用域很重要，理由如下：</p>
+<ul>
+<li>全局作用域中的代码不能使用任何局部变量；</li>
+<li>但是，局部作用域可以访问全局变量；</li>
+<li>一个函数的局部作用域中的代码，不能使用其他局部作用域中的变量。</li>
+<li>如果在不同的作用域中，你可以用相同的名字命名不同的变量。也就是说，可以有一个名为spam 的局部变量，和一个名为spam 的全局变量。（不建议）  </li>
+</ul>
+<p>全局变量不能引用局部作用域的变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import sys, random</span><br><span class="line">def spam():</span><br><span class="line">	egg = 123</span><br><span class="line">spam()</span><br><span class="line">print(egg)</span><br><span class="line">&apos;&apos;&apos;egg是spam函数的局部变量，调用完后就销毁了。所以会报错。</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;py\dz.py&quot;, line 25, in &lt;module&gt;</span><br><span class="line">    print(egg)</span><br><span class="line">NameError: name &apos;egg&apos; is not defined&apos;&apos;&apos;</span><br></pre></td></tr></table></figure>
+<p>局部作用域不能使用其他局部作用域的局部变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def spam():</span><br><span class="line">	egg = 99</span><br><span class="line">	bacon()</span><br><span class="line">	print(egg)</span><br><span class="line"></span><br><span class="line">def bacon():</span><br><span class="line">	ham = 101</span><br><span class="line">	egg = 0</span><br><span class="line"></span><br><span class="line">spam()</span><br><span class="line">#输出99</span><br></pre></td></tr></table></figure>
+<p> 全局变量可以在局部作用域中读取。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def spam():</span><br><span class="line">	print(egg)</span><br><span class="line">egg = 42    #全局变量</span><br><span class="line">spam()</span><br><span class="line">print(egg)</span><br><span class="line">#输出42 42</span><br></pre></td></tr></table></figure>
+<p>使用global语句让局部作用域对全局变量进行写的操作。<br>（不用global而直接在局部作用域对全局变量进行写的操作会报错）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def spam():</span><br><span class="line">	global egg</span><br><span class="line">	egg = &apos;spam&apos;</span><br><span class="line">egg = &apos;global&apos;</span><br><span class="line">spam()</span><br><span class="line">print(egg)    #输出spam</span><br></pre></td></tr></table></figure>
+<p>完毕！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/vim配置C-C-java-python运行环境/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coderdz">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/Ashin.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of coderdz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/vim配置C-C-java-python运行环境/" itemprop="url">vim配置C/C++,java,python运行环境</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T18:59:52+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>vim是一个强大的代码编辑器，强大之处我就不多说了，大家可以自己去百度(被称为上古神器)，既然是一个编辑器，那么他干的功能就只能是写代码，运行环境得自己配置。下面说说具体如何配置：</p>
+<p>1.下载： 首先在电脑安装MinGW（C/C++编译工具），jdk（java开发工具包，里面含java运行环境和java工具），python（安装时注意直接勾选add to path后面就不用配置了）</p>
+<p>以上三个工具建议去官网下：<a href="http://www.mingw.org/" target="_blank">MinGW</a>，<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">jdk</a>，<a href="https://www.python.org/downloads/" target="_blank">python</a>。</p>
+<p>2.安装：正常安装就行，MinGW选择组件时选择C++的（python注意勾选add to path）。</p>
+<p>3.配置环境：右击我的电脑-属性-高级系统设置-环境变量，然后找到path（用户变量和系统变量都行），然后点击新建，</p>
+<pre><code>(1):(C++): 把MinGW 的bin路径和lib路径copy到变量值那行。
+
+(2):(java):把jdk和jre(如果一起安装了的话，没有就不用，jdk是一定要的)的bin路径copy到变量值那行，再自己新建一个classpath的变量，变量值为.;加上自己的jdk的lib路径再加上jdk的lib路径下再加上\tools.jar完成，表达的可能有些不清楚，看看我的示例把：
+</code></pre><p><b><center>.;E:\jdk10\jdk\lib;E:\jdk10\jdk\lib\tools.jar</center></b></p>
+<pre><code>(3):python:之前安装的时候就自动配置好了。
+</code></pre><p>注意不同的路径之间用;隔开。</p>
+<p>以上配置是让自己的电脑拥有了编译运行C/C++，java，python的能力。</p>
+<p>检验方法：打开cmd窗口，输入g++ -v，java，javac，python这些指令若出现相关信息就表示成功了</p>
+<p>然后就是让vim也同样能够编译运行这些语言。</p>
+<p>打开vimrc文件，设置一键编译运行，添加以下代码(我设置的是，<f9>编译，<f10>运行)</f10></f9></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">map &lt;F9&gt; :call InitCompile()&lt;CR&gt; &quot; 识别文件类型并且编译</span><br><span class="line">func! InitCompile()</span><br><span class="line">    exec &quot;w&quot;</span><br><span class="line">    if &amp;filetype == &apos;c&apos;</span><br><span class="line">        exec &quot;!g++ % -o %&lt;&quot;</span><br><span class="line">    elseif &amp;filetype == &apos;python&apos;</span><br><span class="line">	exec &quot;make&quot;</span><br><span class="line">    elseif &amp;filetype == &apos;cpp&apos;</span><br><span class="line">        exec &quot;!g++ % -o %&lt;&quot;</span><br><span class="line">    elseif &amp;filetype == &apos;java&apos; </span><br><span class="line">        exec &quot;!javac %&quot; </span><br><span class="line">    elseif &amp;filetype == &apos;sh&apos;</span><br><span class="line">        :!./%</span><br><span class="line">    endif</span><br><span class="line">endfunc</span><br><span class="line"></span><br><span class="line">map &lt;F10&gt; :call CompileRunGcc()&lt;CR&gt;  &quot; 识别文件类型并运行程序</span><br><span class="line">func! CompileRunGcc()</span><br><span class="line">    exec &quot;w&quot;</span><br><span class="line">    if &amp;filetype == &apos;c&apos;</span><br><span class="line">        exec &quot;! %&lt;&quot;</span><br><span class="line">    elseif &amp;filetype == &apos;cpp&apos;</span><br><span class="line">        exec &quot;! %&lt;&quot;</span><br><span class="line">    elseif &amp;filetype == &apos;python&apos;</span><br><span class="line">	exec &quot;!python %&quot;</span><br><span class="line">    elseif &amp;filetype == &apos;java&apos; </span><br><span class="line">        exec &quot;! java %&lt;&quot;</span><br><span class="line">    elseif &amp;filetype == &apos;sh&apos;</span><br><span class="line">        :!./%</span><br><span class="line">    endif</span><br><span class="line">endfunc</span><br></pre></td></tr></table></figure>
+<center>完毕!</center>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/C-C-程序计时函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coderdz">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/Ashin.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of coderdz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/C-C-程序计时函数/" itemprop="url">C/C++程序计时函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T18:54:19+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在C/C++中有可以直接测试程序运行时间的函数，在&lt;time.h&gt;/<ctime>头文件中，非常方便和实用。</ctime></p>
+<p><strong>clock()</strong>是C/C++中的计时函数，而与其相关的数据类型是<strong>clock_t</strong>。在MSDN中，查得对clock函数定义如下：<strong>clock_t clock(void)</strong> ;</p>
+<p>简单而言，就是该程序从启动到函数调用占用CPU的时间。这个函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之间的CPU时钟计时单元（clock tick）数，在MSDN中称之为挂钟时间（wal-clock）；若挂钟时间不可取，则返回-1。其中clock_t是用来保存时间的数据类型，clock_t实质是头文件中long数据类型类型定义的一个代称。使用计时很简单，只要在程序想计时的地方放入一个clock()函数，另外在结束地方放置一个clock()函数，两个返回值的差即是程序消耗时间。但是该函数计时是以毫秒（ms）为单位的，也就是没过千分之一秒加一，所以需要除以一个常量1000才是以秒计时的，一般使用头文件中声明好的常量CLOCKS_PRE_SEC（即1000）。</p>
+<p>测试程序如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdlib&gt;</span><br><span class="line">#include&lt;ctime&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">clock_t start,end;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">	start=clock();		//程序开始计时</span><br><span class="line">	int ans=0;</span><br><span class="line">	for(int i=1;i&lt;=1e8;i++)</span><br><span class="line">		ans++;</span><br><span class="line">	end=clock();		//程序结束用时</span><br><span class="line">	double endtime=(double)(end-start)/CLOCKS_PER_SEC;</span><br><span class="line">	cout&lt;&lt;&quot;Total time:&quot;&lt;&lt;endtime&lt;&lt;endl;		//s为单位</span><br><span class="line">	cout&lt;&lt;&quot;Total time:&quot;&lt;&lt;endtime*1000&lt;&lt;&quot;ms&quot;&lt;&lt;endl;	//ms为单位</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行截图：<br><img src="images\time.png" alt="运行结果" title="运行结果"><br>用<strong>double</strong>强转是为了更精确，不然不足1秒的会显示0s。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/Codeforces-Round-478-div-2-B-Mancala/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coderdz">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/Ashin.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of coderdz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/Codeforces-Round-478-div-2-B-Mancala/" itemprop="url">Codeforces Round #478(div.2) B. Mancala</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T18:28:17+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><center>题目链接：<a href="http://http//codeforces.com/contest/975/problem/B" target="_blank">Mancala</a></center></p>
+<p><center>time limit per test</center></p>
+<p><center>1 second</center></p>
+<p><center>memory limit per test</center></p>
+<p><center>256 megabytes</center></p>
+<p><center>input</center></p>
+<p><center>standard input</center></p>
+<p><center>output</center></p>
+<p><center>standard output</center><br>Mancala is a game famous in the Middle East. It is played on a board that consists of 14 holes.<br><img src="/images/cf_1.png" alt></p>
+<p>Initially, each hole has ai stones. When a player makes a move, he chooses a hole which contains a positive number of stones. He takes all the stones inside it and then redistributes these stones one by one in the next holes in a counter-clockwise direction.</p>
+<p>Note that the counter-clockwise order means if the player takes the stones from hole i, he will put one stone in the (i+1)-th hole, then in the (i+2)-th, etc. If he puts a stone in the 14-th hole, the next one will be put in the first hole.</p>
+<p>After the move, the player collects all the stones from holes that contain even number of stones. The number of stones collected by player is the score, according to Resli.</p>
+<p>Resli is a famous Mancala player. He wants to know the maximum score he can obtain after one move.</p>
+<p>Input<br>The only line contains 14 integers a1,a2,…,a14 (0≤ai≤109) — the number of stones in each hole.</p>
+<p>It is guaranteed that for any i(1≤i≤14) ai is either zero or odd, and there is at least one stone in the board.</p>
+<p>Output<br>Output one integer, the maximum possible score after one move.</p>
+<p>Examples<br>Input<br>Copy<br>0 1 1 0 0 0 0 0 0 7 0 0 0 0<br>Output<br>Copy<br>4<br>Input<br>Copy<br>5 1 1 1 1 0 0 0 0 0 0 0 0 0<br>Output<br>Copy<br>8<br>Note<br>In the first test case the board after the move from the hole with 7 stones will look like 1 2 2 0 0 0 0 0 0 0 1 1 1 1. Then the player collects the even numbers and ends up with a score equal to 4.</p>
+<p>题意：有14个洞，每个洞有一个值啊a[i],从中找一个值大于0的洞，（把这14个洞看成一个环），然后依次给它下一个洞的值+1，并且立刻让自己这个洞的值变为0，（注意只能从中选一个洞进行这个操作，循环到自己本身也是要+1的），最后让你求这些洞值为偶数的和的最大值。<br>做法基本上是遍历一遍14个洞，然后遍历过程中取一个max，但题目数据ai&lt;=1e9,直接暴力肯定会TLE的，我的一种遍历思路是分两种情况：<br>1.当a[i]&lt;=14时，直接暴力。<br>2.a[i]&gt;14时，求一个x=a[i]/14,k=a[i]%14.就可以表示从a[i]开始循环x圈后再走k步，走的那k步总共加了x+1次，其他的只加了x次。这样就可以一次性加完了。<br>这道题疯狂wa了好多发，哎，还是太菜了啊。</p>
+<p>AC代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;queue&gt;</span><br><span class="line">#include &lt;set&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">#include &lt;ctime&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define IO ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0)</span><br><span class="line">#define rep(i,n) for(int i=1;i&lt;=n;i++)</span><br><span class="line">#define m(a,b) memset(a,b,sizeof(a))</span><br><span class="line">typedef pair&lt;int, int&gt; PII;</span><br><span class="line">typedef long long ll;</span><br><span class="line">const int MAXN=1e5+10;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">	IO;</span><br><span class="line">	ll a[15],b[15],ans=0,cnt;</span><br><span class="line">	for(int i=1;i&lt;=14;i++) cin&gt;&gt;a[i];</span><br><span class="line">	a[0]=0;</span><br><span class="line">	for(int i=1;i&lt;=14;i++)&#123;</span><br><span class="line">		cnt=0;</span><br><span class="line">		memcpy(b,a,sizeof(ll)*15);</span><br><span class="line">		if (b[i]&gt;0)&#123;</span><br><span class="line">			if (b[i]&lt;=14)&#123;</span><br><span class="line">				b[i]=0;</span><br><span class="line">				for(int j=i+1,m=1;m&lt;=a[i];j++,m++)&#123;</span><br><span class="line">					if (j&gt;14) j%=14;</span><br><span class="line">					b[j]++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			else&#123;</span><br><span class="line">				int x=b[i]/14,k=b[i]%14;</span><br><span class="line">				b[i]=0;</span><br><span class="line">				for(int j=i+1,m=1;m&lt;=k;j++,m++)&#123;</span><br><span class="line">					if (j&gt;14) j%=14;</span><br><span class="line">					b[j]+=(x+1);</span><br><span class="line">				&#125;</span><br><span class="line">				for(int j=i+k+1,m=1;m&lt;=14-k;j++,m++)&#123;</span><br><span class="line">					if (j&gt;14) j%=14;</span><br><span class="line">					b[j]+=x;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		for(int j=1;j&lt;=14;j++)</span><br><span class="line">			if (b[j]%2==0)</span><br><span class="line">				cnt+=b[j];</span><br><span class="line">		ans=max(ans,cnt);</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/C-STL-set用法小结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -356,7 +1025,7 @@
           
             <p>STL里面的一个实用的的容器set，可以称之为集合，在里面存放的元素唯一，确定。</p>
 <p>set会自动对容器里的元素排序。</p>
-<p>所需头文件: <strong>#include<set></set></strong></p>
+<p>所需头文件:<code>#include&lt;set&gt;</code></p>
 <p>set中常用方法：</p>
 <p><strong>begin()</strong>:返回第一个元素的地址.</p>
 <p><strong>end()</strong>:返回最后一个元素的地址.</p>
@@ -369,7 +1038,7 @@
 <p><strong>erase(it)</strong>:删除迭代器指针it处元素.</p>
 <p><strong>insert()</strong>:插入某个元素.</p>
 <p>代码演示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;queue&gt;</span><br><span class="line">#include &lt;set&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">    set&lt;int&gt;s;</span><br><span class="line">    for(int i=1;i&lt;=10;i++) s.insert(i);</span><br><span class="line">    cout&lt;&lt;s.size()&lt;&lt;endl; </span><br><span class="line">    cout&lt;&lt;s.max_size()&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;*s.begin()&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;*s.end()&lt;&lt;endl;</span><br><span class="line">    set&lt;int&gt;::iterator it;</span><br><span class="line">    for(it=s.begin();it!=s.end();it++)&#123;</span><br><span class="line">		cout&lt;&lt;*it&lt;&lt;&apos; &apos;;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	if (s.count(1)) cout&lt;&lt;&quot;1在set容器里&quot;&lt;&lt;endl;</span><br><span class="line">    pair&lt;set&lt;int&gt;::const_iterator,set&lt;int&gt;::const_iterator&gt; pr;</span><br><span class="line">    pr=s.equal_range(3);</span><br><span class="line">    cout&lt;&lt;&quot;第一个大于等于3的数是:&quot;&lt;&lt;*pr.first&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;第一个大于3的数是&quot;&lt;&lt;*pr.second&lt;&lt;endl;</span><br><span class="line">	set&lt;int&gt;::iterator first;</span><br><span class="line">	set&lt;int&gt;::iterator second;</span><br><span class="line">	s.erase(s.begin());</span><br><span class="line">	first=s.begin();</span><br><span class="line">	second=first;</span><br><span class="line">	second++;second++;</span><br><span class="line">	s.erase(first,second);</span><br><span class="line">	cout&lt;&lt;&quot;删除后set中元素有:&quot;&lt;&lt;endl;</span><br><span class="line">	for(it=s.begin();it!=s.end();it++)</span><br><span class="line">		cout&lt;&lt;*it&lt;&lt;&quot; &quot;;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行截图：<br><a href="https://img-blog.csdn.net/20180502210739748" title="运行结果" target="_blank" rel="noopener">!运行结果</a></p>
+<p>运行截图：<br><a href="/images/set.png" title="运行结果">!运行结果</a></p>
 <p>再来补上一个今天用set做的题：</p>
 <p>传送门：<a href="http://codeforces.com/contest/975/problem/A" target="_blank">Aramic script</a></p>
 <p>题目大概意思是：给你n个字符串，每个字符串的根定义为去掉字符串里重复的字符后剩下的字符构成的字符串，不管顺序，问最后有多少个根字符串？</p>
@@ -495,7 +1164,7 @@
           
             <p>主要是<strong>fixed</strong>和<strong>setprecision</strong>两种控制浮点型精度。<br>具体的看代码注释吧：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iomanip&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;cstdlib&gt;</span><br><span class="line">#include&lt;cctype&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#define rep(i,n) for(int i=1;i&lt;=n;i++)</span><br><span class="line">#define c(ans) cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">	const double x = 5.432153;</span><br><span class="line">	cout &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">	//默认6精度，所以输出5.43215</span><br><span class="line">	cout &lt;&lt; setprecision(4) &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">	//改为4精度，所以输出5.432</span><br><span class="line">	cout &lt;&lt; fixed &lt;&lt; setprecision(4) &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">	//fixed改成控制小数点位数，所以输出5.4322</span><br><span class="line">	cout &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">	//fixed和setprecision作用还在，输出5.4322</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意要加头文件#inlcude<iomanip></iomanip></p>
+<p>注意要加头文件<code>#inlcude&lt;iomanip&gt;</code></p>
 
           
         
@@ -617,7 +1286,7 @@
           
             <p>在acm写题时会发现，很多人在读取题目数据的时候都用<strong>scanf</strong>,输出时用<strong>printf</strong>.因为C的输入输出效率高得多，程序运行时间会快很多。甚至有些题用<strong>cin</strong>,<strong>cout</strong>解题会TLE，换成<strong>scanf</strong>和<strong>printf</strong>就过了。看过大神用随机数测试过scanf和cin的效率，最大可能相差十倍。那么为什么备受欢迎的c++会比c的慢很多呢？</p>
 <p>c++为了保持c原有的特性，默认情况下cin与stdio保持同步，也就是iostream的缓冲与stdio同步，c++的输入输出能和c的输入输出同时用。正因为这个同步特性，cin与stdin同步进行，cin有了许多额外开销，cout也是如此。但是热衷于用c++输入输出流的就可以用这段代码取消输入输出流的同步特性：</p>
-<p>‘ios_base::sync_with_stdio(false);’</p>
+<p><code>ios_base::sync_with_stdio(false);</code></p>
 
           
         
@@ -969,7 +1638,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="blog of coderdz">
 <meta property="og:description" content="在acm写题时会发现，很多人在读取题目数据的时候都用scanf,输出时用printf.因为C的输入输出效率高得多，程序运行时间会快很多。甚至有些题用cin,cout解题会TLE，换成scanf和printf就过了。看过大神用随机数测试过scanf和cin的效率，最大可能相差十倍。那么为什么备受欢迎的c++会比c的慢很多呢？ c++为了保持c原有的特性，默认情况下cin与stdio保持同步，也就是i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T05:39:19.360Z">
+<meta property="og:updated_time" content="2019-03-27T10:37:07.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++的输入输出与C的输入输出比较">
 <meta name="twitter:description" content="在acm写题时会发现，很多人在读取题目数据的时候都用scanf,输出时用printf.因为C的输入输出效率高得多，程序运行时间会快很多。甚至有些题用cin,cout解题会TLE，换成scanf和printf就过了。看过大神用随机数测试过scanf和cin的效率，最大可能相差十倍。那么为什么备受欢迎的c++会比c的慢很多呢？ c++为了保持c原有的特性，默认情况下cin与stdio保持同步，也就是i">
@@ -357,7 +357,7 @@
       
         <p>在acm写题时会发现，很多人在读取题目数据的时候都用<strong>scanf</strong>,输出时用<strong>printf</strong>.因为C的输入输出效率高得多，程序运行时间会快很多。甚至有些题用<strong>cin</strong>,<strong>cout</strong>解题会TLE，换成<strong>scanf</strong>和<strong>printf</strong>就过了。看过大神用随机数测试过scanf和cin的效率，最大可能相差十倍。那么为什么备受欢迎的c++会比c的慢很多呢？</p>
 <p>c++为了保持c原有的特性，默认情况下cin与stdio保持同步，也就是iostream的缓冲与stdio同步，c++的输入输出能和c的输入输出同时用。正因为这个同步特性，cin与stdin同步进行，cin有了许多额外开销，cout也是如此。但是热衷于用c++输入输出流的就可以用这段代码取消输入输出流的同步特性：</p>
-<p>‘ios_base::sync_with_stdio(false);’</p>
+<p><code>ios_base::sync_with_stdio(false);</code></p>
 
       
     </div>
@@ -488,7 +488,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

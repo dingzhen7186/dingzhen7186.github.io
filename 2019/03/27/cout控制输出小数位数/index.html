@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="blog of coderdz">
 <meta property="og:description" content="主要是fixed和setprecision两种控制浮点型精度。具体的看代码注释吧： 12345678910111213141516171819202122232425#include&amp;lt;cstdio&amp;gt;#include&amp;lt;iomanip&amp;gt;#include&amp;lt;cmath&amp;gt;#include&amp;lt;cstdlib&amp;gt;#include&amp;lt;cctype&amp;gt;#inclu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T05:43:00.159Z">
+<meta property="og:updated_time" content="2019-03-27T10:38:44.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cout控制输出小数位数">
 <meta name="twitter:description" content="主要是fixed和setprecision两种控制浮点型精度。具体的看代码注释吧： 12345678910111213141516171819202122232425#include&amp;lt;cstdio&amp;gt;#include&amp;lt;iomanip&amp;gt;#include&amp;lt;cmath&amp;gt;#include&amp;lt;cstdlib&amp;gt;#include&amp;lt;cctype&amp;gt;#inclu">
@@ -357,7 +357,7 @@
       
         <p>主要是<strong>fixed</strong>和<strong>setprecision</strong>两种控制浮点型精度。<br>具体的看代码注释吧：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iomanip&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;cstdlib&gt;</span><br><span class="line">#include&lt;cctype&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#define rep(i,n) for(int i=1;i&lt;=n;i++)</span><br><span class="line">#define c(ans) cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">	const double x = 5.432153;</span><br><span class="line">	cout &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">	//默认6精度，所以输出5.43215</span><br><span class="line">	cout &lt;&lt; setprecision(4) &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">	//改为4精度，所以输出5.432</span><br><span class="line">	cout &lt;&lt; fixed &lt;&lt; setprecision(4) &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">	//fixed改成控制小数点位数，所以输出5.4322</span><br><span class="line">	cout &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">	//fixed和setprecision作用还在，输出5.4322</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意要加头文件#inlcude<iomanip></iomanip></p>
+<p>注意要加头文件<code>#inlcude&lt;iomanip&gt;</code></p>
 
       
     </div>
@@ -488,7 +488,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
