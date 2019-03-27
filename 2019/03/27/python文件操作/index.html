@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="对文件进行创建，读取和保存等操作  Windows 上的倒斜杠以及 OS X 和 Linux 上的正斜杠   在 Windows 上，路径书写使用倒斜杠（\）作为文件夹之间的分隔符。但在 OS X 和Linux 上，使用正斜杠作为它们的路径分隔符。如果想要程序运行在所有操作系统上，在编写 Python 脚本时，就必须处理这两种情况。             写程序时，先import os   os">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python文件操作">
+<meta property="og:url" content="http://dingzhen7186.github.io/2019/03/27/python文件操作/index.html">
+<meta property="og:site_name" content="blog of coderdz">
+<meta property="og:description" content="对文件进行创建，读取和保存等操作  Windows 上的倒斜杠以及 OS X 和 Linux 上的正斜杠   在 Windows 上，路径书写使用倒斜杠（\）作为文件夹之间的分隔符。但在 OS X 和Linux 上，使用正斜杠作为它们的路径分隔符。如果想要程序运行在所有操作系统上，在编写 Python 脚本时，就必须处理这两种情况。             写程序时，先import os   os">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/file_1.png">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/file_2.png">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/file_3.png">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/file_4.png">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/file_5.png">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/file_6.png">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/file_7.png">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/file_8.png">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/file_9.png">
+<meta property="og:updated_time" content="2019-03-27T15:04:28.807Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python文件操作">
+<meta name="twitter:description" content="对文件进行创建，读取和保存等操作  Windows 上的倒斜杠以及 OS X 和 Linux 上的正斜杠   在 Windows 上，路径书写使用倒斜杠（\）作为文件夹之间的分隔符。但在 OS X 和Linux 上，使用正斜杠作为它们的路径分隔符。如果想要程序运行在所有操作系统上，在编写 Python 脚本时，就必须处理这两种情况。             写程序时，先import os   os">
+<meta name="twitter:image" content="http://dingzhen7186.github.io/images/file_1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dingzhen7186.github.io/2019/03/27/python文件操作/">
+
+
+
+
+#配置deovoice
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "c14153b7"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title>python文件操作 | blog of coderdz</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://your-url" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">blog of coderdz</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">可爱的你终于来啦!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-top">
+          <a href="/top/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-signal"></i> <br>
+            
+            top
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/python文件操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coderdz">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/Ashin.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of coderdz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python文件操作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T22:53:58+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>对文件进行<strong>创建</strong>，<strong>读取</strong>和<strong>保存</strong>等操作</p>
+<p> <strong>Windows 上的倒斜杠以及 OS X 和 Linux 上的正斜杠</strong><br>   在 <strong>Windows</strong> 上，路径书写使用<strong>倒斜杠</strong>（\）作为文件夹之间的分隔符。但在 <strong>OS X</strong> 和<strong>Linux</strong> 上，使用<strong>正斜杠</strong>作为它们的路径分隔符。如果想要程序运行在所有操作系统上，在编写 Python 脚本时，就必须处理这两种情况。<br>             写程序时，先<strong>import os</strong><br>   <strong>os.path.join()</strong> 函数可以很容易完成这件事</p>
+<blockquote>
+<p><em>如果将单个文件和路径上的文件夹名称的字符串传递给它，os.path.join()就会返回一个文件路径的字符串，包含正确的路径分隔符</em></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import os</span><br><span class="line">&gt;&gt;&gt; os.path.join(&apos;usr&apos;, &apos;bin&apos;, &apos;coderdz&apos;)</span><br><span class="line">&apos;usr\\bin\\coderdz&apos;</span><br></pre></td></tr></table></figure>
+<p>这是在Windows上运行出的结果，输出中倒斜杠有两个，第一个倒斜杠是转义字符，每个倒斜杠都需要另外一个倒斜杠字符来转义得到<br>如果在Linux下得到的结果：<br><img src="/images/file_1.png" alt="centos7" title="centos"><br>如果需要创建文件名称的字符串，os.path.join()函数就很有用<br><img src="/images/file_2.png" alt><br><strong>获取当前工作目录和改变目录</strong>：</p>
+<blockquote>
+<p>利用 os.getcwd()函数，可以取得当前工作路径的字符串，并可以利用 os.chdir()改变它，更改的目录不存在会报错！</p>
+</blockquote>
+<p><img src="/images/file_3.png" alt><br><strong>创建新文件夹：</strong><br>程序可以用 os.makedirs()函数创建新文件夹（目录）<br><img src="/images/file_4.png" alt><br><img src="/images/file_5.png" alt><br><strong>处理绝对路径和相对路径</strong> ：<br>os.path 模块提供了一些函数，返回一个相对路径的绝对路径，以及检查给定的路径是否为绝对路径。<br>• 调用 os.path.abspath(path)将返回参数的绝对路径的字符串。这是将相对路径转换为绝对路径的简便方法。<br>• 调用 os.path.isabs(path)，如果参数是一个绝对路径，就返回 True，如果参数是一个相对路径，就返回 False。<br>• 调用 os.path.relpath(path, start)将返回从 start 路径到 path 的相对路径的字符串。如果没有提供 start，就使用当前工作目录作为开始路径。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; os.path.abspath(&apos;.&apos;)</span><br><span class="line">&apos;C:\\system32&apos;</span><br><span class="line">&gt;&gt;&gt; os.path.abspath(&apos;.\\Scripts&apos;)</span><br><span class="line">&apos;C:\\system32\\Scripts&apos;</span><br><span class="line">&gt;&gt;&gt; os.path.isabs(&apos;.&apos;)</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; os.path.isabs(os.path.abspath(&apos;.&apos;))</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; os.path.relpath(&apos;C:\\Windows&apos;, &apos;C:\\&apos;)</span><br><span class="line">&apos;Windows&apos;</span><br><span class="line">&gt;&gt;&gt; os.path.relpath(&apos;C:\\Windows&apos;, &apos;C:\\spam\\eggs&apos;)</span><br><span class="line">&apos;..\\..\\Windows&apos;</span><br><span class="line">&gt;&gt;&gt; os.getcwd()</span><br><span class="line">&apos;C:\\system32&apos;</span><br></pre></td></tr></table></figure>
+<p>调用 os.path.dirname(path)将返回一个字符串，它包含 path 参数中最后一个斜杠之前的所有内容。调用 os.path.basename(path)将返回一个字符串，它包含 path 参数中最后一个斜杠之后的所有内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; path = &apos;C:\\Windows\\System32\\calc.exe&apos;</span><br><span class="line">&gt;&gt;&gt; os.path.basename(path)</span><br><span class="line">&apos;calc.exe&apos;</span><br><span class="line">&gt;&gt;&gt; os.path.dirname(path)</span><br><span class="line">&apos;C:\\Windows\\System32&apos;</span><br></pre></td></tr></table></figure>
+<p>如果同时需要一个路径的目录名称和基本名称，就可以调用 <strong>os.path.split()</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; calcFilePath = &apos;C:\\Windows\\System32\\calc.exe&apos;</span><br><span class="line">&gt;&gt;&gt; os.path.split(calcFilePath)</span><br><span class="line">(&apos;C:\\Windows\\System32&apos;, &apos;calc.exe&apos;)</span><br></pre></td></tr></table></figure>
+<p>接受一个文件路径并返回每个文件夹的字符串的列表的方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; calcFilePath.split(os.path.sep)</span><br><span class="line">[&apos;C:&apos;, &apos;Windows&apos;, &apos;System32&apos;, &apos;calc.exe&apos;]</span><br></pre></td></tr></table></figure>
+<p>在 OS X 和 Linux 系统上，返回的列表头上有一个空字符串：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; &apos;/usr/bin&apos;.split(os.path.sep)</span><br><span class="line">[&apos;&apos;, &apos;usr&apos;, &apos;bin&apos;]</span><br></pre></td></tr></table></figure></p>
+<p><strong>查看文件大小和文件夹内容</strong></p>
+<ul>
+<li>调用 os.path.getsize(path)将返回 path 参数中文件的字节数。</li>
+<li>调用 os.listdir(path)将返回文件名字符串的列表，包含 path 参数中的每个文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; os.path.getsize(&apos;C:\\Windows\\System32\\calc.exe&apos;)</span><br><span class="line">776192</span><br><span class="line">&gt;&gt;&gt; os.listdir(&apos;C:\\Windows\\System32&apos;)</span><br><span class="line">[&apos;0409&apos;, &apos;12520437.cpx&apos;, &apos;12520850.cpx&apos;, &apos;5U877.ax&apos;, &apos;aaclient.dll&apos;,</span><br><span class="line">--snip--</span><br><span class="line">&apos;xwtpdui.dll&apos;, &apos;xwtpw32.dll&apos;, &apos;zh-CN&apos;, &apos;zh-HK&apos;, &apos;zh-TW&apos;, &apos;zipfldr.dll&apos;]</span><br></pre></td></tr></table></figure>
+<p>可以看到，我的计算机上的 calc.exe 程序是 776192 字节。在我的C:\Windows\system32 下有许多文件。如果想知道这个目录下所有文件的总字节数，就可以同时使用 os.path.getsize()和 os.listdir()。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; totalSize = 0</span><br><span class="line">&gt;&gt;&gt; for filename in os.listdir(&apos;C:\\Windows\\System32&apos;):</span><br><span class="line"> totalSize = totalSize + os.path.getsize(os.path.join(&apos;C:\\Windows\\System32&apos;, filename))</span><br><span class="line">&gt;&gt;&gt; print(totalSize)</span><br><span class="line">1117846456</span><br></pre></td></tr></table></figure>
+<p>可以查看C:\Windows\System32文件夹属性大小是否与计算一致。</p>
+<p><strong>检查路径有效性</strong>：<br>如果你提供的路径不存在，许多 Python 函数就会崩溃并报错。os.path 模块提<br>供了一些函数，用于检测给定的路径是否存在，以及它是文件还是文件夹。<br>• 如果 path 参数所指的文件或文件夹存在，调用 os.path.exists(path)将返回 True，<br>否则返回 False。<br>• 如果 path 参数存在，并且是一个文件，调用 os.path.isfile(path)将返回 True，否<br>则返回 False。<br>• 如果 path 参数存在，并且是一个文件夹，调用 os.path.isdir(path)将返回 True，<br>否则返回 False。<br><img src="/images/file_6.png" alt></p>
+<p><strong>文件读写过程</strong> ：<br>在 Python 中，读写文件有 3 个步骤：<br>1．调用 open()函数，返回一个 File 对象。<br>2．调用 File 对象的 read()或 write()方法。<br>3．调用 File 对象的 close()方法，关闭该文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">myfile=open(&apos;D:\\hello.txt&apos;)  #打开文件对象</span><br><span class="line">#open函数默认只读,可加入参数&apos;r&apos;作为第二个参数,但效果也是只读模式</span><br><span class="line">&gt;&gt;&gt; helloContent = helloFile.read()</span><br><span class="line">&gt;&gt;&gt; helloContent</span><br><span class="line">&apos;Hello world!&apos;</span><br></pre></td></tr></table></figure>
+<p>使用 readlines()方法，从该文件取得一个字符串的列表，列表中的每个字符串就是文本中的每一行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; sonnetFile = open(&apos;sonnet29.txt&apos;)</span><br><span class="line">&gt;&gt;&gt; sonnetFile.readlines()</span><br><span class="line">[When, in disgrace with fortune and men&apos;s eyes,\n&apos;, &apos; I all alone beweep my</span><br><span class="line">outcast state,\n&apos;, And trouble deaf heaven with my bootless cries,\n&apos;, And</span><br><span class="line">look upon myself and curse my fate,&apos;]</span><br></pre></td></tr></table></figure>
+<p><strong>写入文件</strong>：</p>
+<ul>
+<li><strong>open(file, ‘w’)</strong> ：打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除覆盖。如果该文件不存在，创建新文件。</li>
+<li><strong>open(file, ‘a’)</strong> ：打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; baconFile = open(&apos;bacon.txt&apos;, &apos;w&apos;)</span><br><span class="line">&gt;&gt;&gt; baconFile.write(&apos;Hello world!\n&apos;)</span><br><span class="line">13</span><br><span class="line">&gt;&gt;&gt; baconFile.close()</span><br><span class="line">&gt;&gt;&gt; baconFile = open(&apos;bacon.txt&apos;, &apos;a&apos;)</span><br><span class="line">&gt;&gt;&gt; baconFile.write(&apos;Bacon is not a vegetable.&apos;)</span><br><span class="line">25</span><br><span class="line">&gt;&gt;&gt; baconFile.close()</span><br><span class="line">&gt;&gt;&gt; baconFile = open(&apos;bacon.txt&apos;)</span><br><span class="line">&gt;&gt;&gt; content = baconFile.read()</span><br><span class="line">&gt;&gt;&gt; baconFile.close()</span><br><span class="line">&gt;&gt;&gt; print(content)</span><br><span class="line">Hello world!</span><br><span class="line">Bacon is not a vegetable.</span><br></pre></td></tr></table></figure>
+<p><strong>用 shelve 模块保存变量</strong> ：<br>利用 shelve 模块，你可以将 Python 程序中的变量保存到二进制的 shelf 文件中。这样，程序就可以从硬盘中恢复变量的数据。中的变量保存到二进制的 shelf 文件中。这样，程序就可以从硬盘中恢复变量的数据。shelve 模块让你在程序中添加“保存”和“打开”功能。例如，如果运行一个程序，并输入了一些配置设置，就可以将这些设置保存到一个 shelf 文件，然后让程序下一次运行时加载它们。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import os, shelve</span><br><span class="line">demo=shelve.open(&apos;demodata&apos;) #如果没有demodata文件，则创建</span><br><span class="line">cats=[&apos;Zophie&apos;, &apos;Pooka&apos;, &apos;Simon&apos;]</span><br><span class="line">demo[&apos;cats&apos;]=cats</span><br><span class="line">demo.close()</span><br><span class="line">demo=shelve.open(&apos;demodata&apos;)</span><br><span class="line">print(type(demo))</span><br><span class="line">print(demo[&apos;cats&apos;])</span><br></pre></td></tr></table></figure>
+<p>运行上述代码，会在当前目录生成demodata.bak, demodata.dir, demodata.dat三个新文件.而在LInux上，只会生成一个demodata.db文件。这些二进制文件存储着shelve数据。<br><img src="/images/file_7.png" alt><br>运行结果：<br><img src="/images/file_8.png" alt><br>shelf 值有 keys()和 values()方法，返回 shelf 中键和值的类似列表的值。因为这些方法返回类似列表的值，而不是真正的列表，所以应该将它们传递给 list()函数，取得列表的形式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(list(demo.keys()))</span><br><span class="line">print(list(demo.values()))</span><br></pre></td></tr></table></figure>
+<p><img src="/images/file_9.png" alt></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>谢谢你请我吃苹果！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="coderdz 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/27/ACM经典代码总结-代码实现/" rel="next" title="ACM经典代码总结+代码实现~">
+                <i class="fa fa-chevron-left"></i> ACM经典代码总结+代码实现~
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/Ashin.jpg" alt="coderdz">
+            
+              <p class="site-author-name" itemprop="name">coderdz</p>
+              <p class="site-description motion-element" itemprop="description">一个喜欢五月天的代码男孩!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/dingzhen7186" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:dingzhen7186@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/codedz" title="我的CSDN" target="_blank">我的CSDN</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        ﻿<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">coderdz</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 阅读数
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+	<script type"text javascript" src="/js/src/clicklove.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true},"react":{"opacityDefault":0.5,"opacityOnHover":0},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
