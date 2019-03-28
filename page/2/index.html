@@ -283,6 +283,145 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/C-STL-set用法小结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coderdz">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/Ashin.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of coderdz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/C-STL-set用法小结/" itemprop="url">C++ STL set用法小结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T13:30:31+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>STL里面的一个实用的的容器set，可以称之为集合，在里面存放的元素唯一，确定。</p>
+<p>set会自动对容器里的元素排序。</p>
+<p>所需头文件:<code>#include&lt;set&gt;</code></p>
+<p>set中常用方法：</p>
+<p><strong>begin()</strong>:返回第一个元素的地址.</p>
+<p><strong>end()</strong>:返回最后一个元素的地址.</p>
+<p><strong>empty()</strong>:判断集合是否为空.</p>
+<p><strong>clear()</strong>:清空set中所有元素.</p>
+<p><strong>max_size()</strong>:返回set容器可能包含的元素最大个数.</p>
+<p><strong>size()</strong>:返回当前容器中元素的个数.</p>
+<p><strong>count()</strong>:返回set中某个键值的个数,因为一个键值在set中只能出现一次或0次，也就变成了判断该元素是否出现.</p>
+<p><strong>equal_range()</strong>:返回一对定位器，分别表示第一个大于或等于给定关键值的元素和 第一个大于给定关键值的元素，这个返回值是一个pair类型，如果这一对定位器中哪个返回失败，就会等于end()的值.</p>
+<p><strong>erase(it)</strong>:删除迭代器指针it处元素.</p>
+<p><strong>insert()</strong>:插入某个元素.</p>
+<p>代码演示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;queue&gt;</span><br><span class="line">#include &lt;set&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">    set&lt;int&gt;s;</span><br><span class="line">    for(int i=1;i&lt;=10;i++) s.insert(i);</span><br><span class="line">    cout&lt;&lt;s.size()&lt;&lt;endl; </span><br><span class="line">    cout&lt;&lt;s.max_size()&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;*s.begin()&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;*s.end()&lt;&lt;endl;</span><br><span class="line">    set&lt;int&gt;::iterator it;</span><br><span class="line">    for(it=s.begin();it!=s.end();it++)&#123;</span><br><span class="line">		cout&lt;&lt;*it&lt;&lt;&apos; &apos;;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	if (s.count(1)) cout&lt;&lt;&quot;1在set容器里&quot;&lt;&lt;endl;</span><br><span class="line">    pair&lt;set&lt;int&gt;::const_iterator,set&lt;int&gt;::const_iterator&gt; pr;</span><br><span class="line">    pr=s.equal_range(3);</span><br><span class="line">    cout&lt;&lt;&quot;第一个大于等于3的数是:&quot;&lt;&lt;*pr.first&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;&quot;第一个大于3的数是&quot;&lt;&lt;*pr.second&lt;&lt;endl;</span><br><span class="line">	set&lt;int&gt;::iterator first;</span><br><span class="line">	set&lt;int&gt;::iterator second;</span><br><span class="line">	s.erase(s.begin());</span><br><span class="line">	first=s.begin();</span><br><span class="line">	second=first;</span><br><span class="line">	second++;second++;</span><br><span class="line">	s.erase(first,second);</span><br><span class="line">	cout&lt;&lt;&quot;删除后set中元素有:&quot;&lt;&lt;endl;</span><br><span class="line">	for(it=s.begin();it!=s.end();it++)</span><br><span class="line">		cout&lt;&lt;*it&lt;&lt;&quot; &quot;;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行截图：<br><img src="/images/set.png" alt="运行结果" title="运行结果"></p>
+<p>再来补上一个今天用set做的题：</p>
+<p>传送门：<a href="http://codeforces.com/contest/975/problem/A" target="_blank">Aramic script</a></p>
+<p>题目大概意思是：给你n个字符串，每个字符串的根定义为去掉字符串里重复的字符后剩下的字符构成的字符串，不管顺序，问最后有多少个根字符串？</p>
+<p>AC代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">/**********************************************</span><br><span class="line"> *Author*        :coderdz</span><br><span class="line"> *Created Time*  : 2018/5/2 20:42:04</span><br><span class="line">*********************************************/</span><br><span class="line"> </span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;queue&gt;</span><br><span class="line">#include &lt;set&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">#include &lt;ctime&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define IO ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0)</span><br><span class="line">#define rep(i,n) for(int i=1;i&lt;=n;i++);</span><br><span class="line">#define m(a,b) memset(a,b,sizeof(a))</span><br><span class="line">typedef pair&lt;int, int&gt; PII;</span><br><span class="line">typedef long long LL;</span><br><span class="line">const int MAXN=1e5+10;</span><br><span class="line"> </span><br><span class="line">inline void OPEN(string s)&#123;</span><br><span class="line">    freopen((s + &quot;.in&quot;).c_str(), &quot;r&quot;, stdin);</span><br><span class="line">    freopen((s + &quot;.out&quot;).c_str(), &quot;w&quot;, stdout);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">    IO;</span><br><span class="line">    set&lt;string&gt;s;</span><br><span class="line">    s.clear();</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    while(n--)&#123;</span><br><span class="line">		set&lt;char&gt;ss;</span><br><span class="line">		set&lt;char&gt;::iterator it;</span><br><span class="line">		ss.clear();</span><br><span class="line">		string t;</span><br><span class="line">		cin&gt;&gt;t;</span><br><span class="line">		for(int i=0;i&lt;t.size();i++) ss.insert(t[i]);</span><br><span class="line">		t=&quot;&quot;;</span><br><span class="line">		for(it=ss.begin();it!=ss.end();it++) t+=(*it);</span><br><span class="line">		s.insert(t);</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;s.size()&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/cout控制输出小数位数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -834,7 +973,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -847,7 +986,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
