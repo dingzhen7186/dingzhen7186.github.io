@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="python,">
+  <meta name="keywords" content="mysql,">
 
 
 
@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="在被调用函数内赋值的变元和变量，处于该函数的“局部作用域”。在所有函数之外赋值的变量，属于“全局作用域”。处于局部作用域的变量，被称为“局部变量”。处于全局作用域的变量，被称为“全局变量”。一个变量必是其中一种，不能既是局部的又是全局的。可以将“作用域”看成是变量的容器。当作用域被销毁时，所有保存在该作用域内的变量的值就被丢弃了。只有一个全局作用域，它是在程序开始时创建的。如果程序终止，全局作用域">
-<meta name="keywords" content="python">
+<meta name="description" content="mysql安装 进入mysql官网下载页面：mysql download 下载好压缩包后直接压缩到自己需要的地方即可见图！   mysql配置 在mysql目录下新建一个mysql.ini文件文件内容: 1234567891011121314151617# 服务端配置[mysqld]# 设置3306端口port = 3306# 设置mysql安装目录basedir=E:/server/mysql#">
+<meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈python中的全局变量和局部变量~">
-<meta property="og:url" content="http://dingzhen7186.github.io/2019/03/27/浅谈python中的全局变量和局部变量/index.html">
+<meta property="og:title" content="mysql安装及配置">
+<meta property="og:url" content="http://dingzhen7186.github.io/2019/03/30/mysql安装及配置/index.html">
 <meta property="og:site_name" content="blog of coderdz">
-<meta property="og:description" content="在被调用函数内赋值的变元和变量，处于该函数的“局部作用域”。在所有函数之外赋值的变量，属于“全局作用域”。处于局部作用域的变量，被称为“局部变量”。处于全局作用域的变量，被称为“全局变量”。一个变量必是其中一种，不能既是局部的又是全局的。可以将“作用域”看成是变量的容器。当作用域被销毁时，所有保存在该作用域内的变量的值就被丢弃了。只有一个全局作用域，它是在程序开始时创建的。如果程序终止，全局作用域">
+<meta property="og:description" content="mysql安装 进入mysql官网下载页面：mysql download 下载好压缩包后直接压缩到自己需要的地方即可见图！   mysql配置 在mysql目录下新建一个mysql.ini文件文件内容: 1234567891011121314151617# 服务端配置[mysqld]# 设置3306端口port = 3306# 设置mysql安装目录basedir=E:/server/mysql#">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T15:19:11.094Z">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/mysql_download.png">
+<meta property="og:image" content="http://dingzhen7186.github.io/images/mysql_service.png">
+<meta property="og:updated_time" content="2019-03-30T11:10:05.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈python中的全局变量和局部变量~">
-<meta name="twitter:description" content="在被调用函数内赋值的变元和变量，处于该函数的“局部作用域”。在所有函数之外赋值的变量，属于“全局作用域”。处于局部作用域的变量，被称为“局部变量”。处于全局作用域的变量，被称为“全局变量”。一个变量必是其中一种，不能既是局部的又是全局的。可以将“作用域”看成是变量的容器。当作用域被销毁时，所有保存在该作用域内的变量的值就被丢弃了。只有一个全局作用域，它是在程序开始时创建的。如果程序终止，全局作用域">
+<meta name="twitter:title" content="mysql安装及配置">
+<meta name="twitter:description" content="mysql安装 进入mysql官网下载页面：mysql download 下载好压缩包后直接压缩到自己需要的地方即可见图！   mysql配置 在mysql目录下新建一个mysql.ini文件文件内容: 1234567891011121314151617# 服务端配置[mysqld]# 设置3306端口port = 3306# 设置mysql安装目录basedir=E:/server/mysql#">
+<meta name="twitter:image" content="http://dingzhen7186.github.io/images/mysql_download.png">
 
 
 
@@ -120,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://dingzhen7186.github.io/2019/03/27/浅谈python中的全局变量和局部变量/">
+  <link rel="canonical" href="http://dingzhen7186.github.io/2019/03/30/mysql安装及配置/">
 
 
 
@@ -136,7 +139,7 @@
   </script>
 
 
-  <title>浅谈python中的全局变量和局部变量~ | blog of coderdz</title>
+  <title>mysql安装及配置 | blog of coderdz</title>
   
 
 
@@ -284,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/浅谈python中的全局变量和局部变量/">
+    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/30/mysql安装及配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="coderdz">
@@ -301,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅谈python中的全局变量和局部变量~</h1>
+          <h1 class="post-title" itemprop="name headline">mysql安装及配置</h1>
         
 
         <div class="post-meta">
@@ -313,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T19:08:43+08:00">
-                2019-03-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T17:47:32+08:00">
+                2019-03-30
               </time>
             
 
@@ -356,22 +359,27 @@
       
 
       
-        <p>在被调用函数内赋值的变元和变量，处于该函数的“<strong>局部作用域</strong>”。在所有函数之外赋值的变量，属于“<strong>全局作用域</strong>”。处于局部作用域的变量，被称为“<strong>局部变量</strong>”。处于全局作用域的变量，被称为“<strong>全局变量</strong>”。一个变量必是其中一种，<strong>不能既是局部的又是全局的。</strong><br>可以将“作用域”看成是变量的容器。当作用域被销毁时，所有保存在该作用域内的变量的值就被丢弃了。只有一个全局作用域，它是在程序开始时创建的。如果程序终止，全局作用域就被销毁，它的所有变量就被丢弃了。否则，下次你运行程序的时候，这些变量就会记住它们上次运行时的值。一个函数被调用时，就创建了一个局部作用域。在这个函数内赋值的所有变量，存在于该局部作用域内。该函数返回时，这个局部作用域就被销毁了，这些变量就丢失了。下次调用这个函数，局部变量不会记得该函数上次被调用时它们保存的值。<br>作用域很重要，理由如下：</p>
-<ul>
-<li>全局作用域中的代码不能使用任何局部变量；</li>
-<li>但是，局部作用域可以访问全局变量；</li>
-<li>一个函数的局部作用域中的代码，不能使用其他局部作用域中的变量。</li>
-<li>如果在不同的作用域中，你可以用相同的名字命名不同的变量。也就是说，可以有一个名为spam 的局部变量，和一个名为spam 的全局变量。（不建议）  </li>
-</ul>
-<p>全局变量不能引用局部作用域的变量。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import sys, random</span><br><span class="line">def spam():</span><br><span class="line">	egg = 123</span><br><span class="line">spam()</span><br><span class="line">print(egg)</span><br><span class="line">&apos;&apos;&apos;egg是spam函数的局部变量，调用完后就销毁了。所以会报错。</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;py\dz.py&quot;, line 25, in &lt;module&gt;</span><br><span class="line">    print(egg)</span><br><span class="line">NameError: name &apos;egg&apos; is not defined&apos;&apos;&apos;</span><br></pre></td></tr></table></figure>
-<p>局部作用域不能使用其他局部作用域的局部变量。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def spam():</span><br><span class="line">	egg = 99</span><br><span class="line">	bacon()</span><br><span class="line">	print(egg)</span><br><span class="line"></span><br><span class="line">def bacon():</span><br><span class="line">	ham = 101</span><br><span class="line">	egg = 0</span><br><span class="line"></span><br><span class="line">spam()</span><br><span class="line">#输出99</span><br></pre></td></tr></table></figure>
-<p> 全局变量可以在局部作用域中读取。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def spam():</span><br><span class="line">	print(egg)</span><br><span class="line">egg = 42    #全局变量</span><br><span class="line">spam()</span><br><span class="line">print(egg)</span><br><span class="line">#输出42 42</span><br></pre></td></tr></table></figure>
-<p>使用global语句让局部作用域对全局变量进行写的操作。<br>（不用global而直接在局部作用域对全局变量进行写的操作会报错）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def spam():</span><br><span class="line">	global egg</span><br><span class="line">	egg = &apos;spam&apos;</span><br><span class="line">egg = &apos;global&apos;</span><br><span class="line">spam()</span><br><span class="line">print(egg)    #输出spam</span><br></pre></td></tr></table></figure>
-<p>完毕！</p>
+        <h2 id="mysql安装"><a href="#mysql安装" class="headerlink" title="mysql安装"></a>mysql安装</h2><ol>
+<li>进入mysql官网下载页面：<a href="http://dev.mysql.com/downloads/mysql/" target="_blank">mysql download</a></li>
+<li>下载好压缩包后直接压缩到自己需要的地方即可<br>见图！<br><img src="/images/mysql_download.png" alt="mysql下载" title="mysql下载"></li>
+</ol>
+<hr>
+<h2 id="mysql配置"><a href="#mysql配置" class="headerlink" title="mysql配置"></a>mysql配置</h2><ol>
+<li><p>在mysql目录下新建一个<code>mysql.ini</code>文件<br>文件内容:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 服务端配置</span><br><span class="line">[mysqld]</span><br><span class="line"># 设置3306端口</span><br><span class="line">port = 3306</span><br><span class="line"># 设置mysql安装目录</span><br><span class="line">basedir=E:/server/mysql</span><br><span class="line"># 数据存放目录</span><br><span class="line">datadir=E:/server/mysql/data</span><br><span class="line"># 最大连接数</span><br><span class="line">max_connnections=200</span><br><span class="line"># 服务器默认存储字符集</span><br><span class="line">character-set-server=utf8</span><br><span class="line"># 创建新表时将使用的默认存储引擎</span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line"># 客户端编码设置</span><br><span class="line">[mysql]</span><br><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在cmd中进入mysql/bin目录，使用命令<code>mysql.exe -install</code><br><font color="red">一定要以管理员身份运行cmd,否则会报错</font><br><img src="/images/mysql_service.png" alt="安装mysql服务" title="安装mysql服务"></p>
+</li>
+<li><p>初始化操作<br>cmd里面输入:<code>mysqld.exe --initialize-insecure --user=mysql</code><br>会发现mysql目录下多了个data文件夹</p>
+</li>
+<li><p>第一次安装不会自动启动mysql，需要手动启动（以后自动启动），输入：<br><code>net start mysql</code></p>
+</li>
+<li><p>默认安装mysql有一个超级管理员用户root，但是没有密码，不安全，因此需要手动修改root用户的密码,输入:<code>mysqladmin -u root -p password 新密码</code></p>
+</li>
+<li><p>mysql是一种C/S结构软件，因此需要使用客户端去访问服务端，mysql提供了自己的客户端mysql.exe，可以cmd下通过mysql.exe进行访问输入:<code>mysql.exe -u用户名 -h主机地址 -P端口 -p密码</code></p>
+</li>
+</ol>
+<p><b><center>至此，mysql安装配置完成！</center></b></p>
 
       
     </div>
@@ -413,7 +421,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
           
         </div>
       
@@ -426,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/27/vim配置C-C-java-python运行环境/" rel="next" title="vim配置C/C++,java,python运行环境">
-                <i class="fa fa-chevron-left"></i> vim配置C/C++,java,python运行环境
+              <a href="/2019/03/29/PHP安装及配置/" rel="next" title="PHP安装及配置">
+                <i class="fa fa-chevron-left"></i> PHP安装及配置
               </a>
             
           </div>
@@ -435,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/27/pip以及python常用库的安装介绍/" rel="prev" title="pip以及python常用库的安装介绍">
-                pip以及python常用库的安装介绍 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -490,8 +494,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -574,6 +587,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql安装"><span class="nav-number">1.</span> <span class="nav-text">mysql安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql配置"><span class="nav-number">2.</span> <span class="nav-text">mysql配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
