@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://dingzhen7186.github.io/images/apache.png">
 <meta property="og:image" content="http://dingzhen7186.github.io/images/httpd.png">
 <meta property="og:image" content="http://dingzhen7186.github.io/images/httpd_bug.png">
-<meta property="og:updated_time" content="2019-03-29T05:50:49.711Z">
+<meta property="og:updated_time" content="2019-03-30T03:28:27.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="about Apache">
 <meta name="twitter:description" content="apache安装 进入apache官网download页面:http://httpd.apache.org/download.cgi 点击下面的Files for Microsoft Windows 在Downloading Apache for Windows栏下选择ApacheHaus 选择对应自己电脑位数(32/64)的版本,点击外国国旗图标即可下载 下载后直接解压压缩文件到自己的一个盘符或">
@@ -370,9 +370,9 @@
 <hr>
 <h2 id="apache配置"><a href="#apache配置" class="headerlink" title="apache配置"></a>apache配置</h2><ol>
 <li>apache目录下文件(夹)介绍<br><img src="/images/apache.png" alt="apache" title="apache"></li>
-<li>ServerRoot:服务器所在目录,找到Apache\conf\httpd.conf文件中的ServerRoot<br>改为你的apache所在目录,如：ServerRoot “E:/server/Apache24”<br>Define Server相同修改<br>ServerName 修改为localhost</li>
-<li>DocumentRoot:网站默认根目录.E:/server/Web(为了方便新建一个文件夹，学习<br>通常可以放到默认网站根目录:Apache/htdocs)</li>
-<li>Directory:权限控制,指定与网站默认根目录一致.E:/server/Apache24<br><img src="/images/httpd.png" alt="conf文件修改" title="conf文件修改"></li>
+<li>ServerRoot:服务器所在目录,找到Apache\conf\httpd.conf文件中的ServerRoot<br>改为你的apache所在目录,如：<code>ServerRoot &quot;E:/server/Apache24&quot;</code><br>Define Server相同修改<br>ServerName 修改为localhost</li>
+<li>DocumentRoot:网站默认根目录.<code>E:/server/Web</code>(为了方便新建一个文件夹，学习<br>通常可以放到默认网站根目录:Apache/htdocs)</li>
+<li>Directory:权限控制,指定与网站默认根目录一致.<code>E:/server/Apache24</code><br><img src="/images/httpd.png" alt="conf文件修改" title="conf文件修改"></li>
 <li>管理员身份运行cmd,切换到/Apache24/bin,把apache安装成Windows系统服务<br>输入命令: <code>httpd.exe -k install</code><br>加入到Windows系统服务的好处是以后只要开机apache服务就自动打开了,省的我们每次都要手动打开</li>
 <li>第一次安装后不会自动启动,需要手动启动,输入指令<br><code>httpd.exe -k start</code></li>
 <li>cmd中输入<code>httpd.exe -t</code>如果出现<code>Synax OK</code>则表示配置文件修改成功 </li>
@@ -383,7 +383,7 @@
 </ul>
 <ol>
 <li>修改 Apache 端口的方法是最妥协的方法了，后果是当你开启 Apache 服务器的时候，访问的本机地址将会附带端口号，比如<code>http://localhost:8888</code>,修改方式是打开httpd.conf文件,把文件中Listen的值修改为其他未被占用的端口号就行了</li>
-<li>找出80端口被谁占用:在cmd中输入netstat -a -o命令查看被占用端口的pid,然后输入指令tasklist,找到对应pid的进程,用taskkill -f -im 终止掉该进程<font color="red">(注意要进入管理员权限的cmd才有权限终止进程)</font></li>
+<li>找出80端口被谁占用:在cmd中输入<code>netstat -a -o</code>命令查看被占用端口的pid,然后输入指令tasklist,找到对应pid的进程,用<code>taskkill -f -im</code>终止掉该进程<font color="red">(注意要进入管理员权限的cmd才有权限终止进程)</font></li>
 </ol>
 <p><b><center>至此，你的apache服务器配置运行完成了！</center></b></p>
 

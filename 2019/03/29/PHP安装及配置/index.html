@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://dingzhen7186.github.io/images/loadmodule.png">
 <meta property="og:image" content="http://dingzhen7186.github.io/images/load_php.png">
 <meta property="og:image" content="http://dingzhen7186.github.io/images/timezone.png">
-<meta property="og:updated_time" content="2019-03-29T14:49:39.117Z">
+<meta property="og:updated_time" content="2019-03-30T03:22:17.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP安装及配置">
 <meta name="twitter:description" content="PHP下载安装 还是建议去官网下载:PHP,大约24M,然而下载速度贼慢！重要的来了，看图，我是上过当的，你们千万别和我一样 直接解压到新建的一个PHP文件夹中，最好和自己的apache放在同一级目录,比如我的就是放在我的server目录下 php文件介绍   配置PHP .ini才是真正的配置文件,把php.ini-development文件改成php.ini,最好留个备份的php.ini-de">
@@ -375,12 +375,12 @@
 </ol>
 <hr>
 <h2 id="Apache加载PHP"><a href="#Apache加载PHP" class="headerlink" title="Apache加载PHP"></a>Apache加载PHP</h2><blockquote>
-<p>Apache的工作原理是模块化加载工作，即加在某个模块后就可以使用对应模块的功能;二PHP是独立工作的，不具备从互联网接收别人请求的能力，二者需要相互协作。协作的模式就是PHP为Apache提供的调用功能模块，Apache只需要按照正确的方式去调用PHP，并且让PHP在需要的时候能够工作即可。</p>
+<p>Apache的工作原理是模块化加载工作，即加在某个模块后就可以使用对应模块的功能;而PHP是独立工作的，不具备从互联网接收别人请求的能力，二者需要相互协作。协作的模式就是PHP为Apache提供的调用功能模块，Apache只需要按照正确的方式去调用PHP，并且让PHP在需要的时候能够工作即可。</p>
 </blockquote>
 <ol>
 <li>找到PHP为Apache提供的模块文件：<code>php7apache2_4.dll</code></li>
 <li>在Apache的配置文件中使用LoadModule命令加载PHP模块，<code>LoadModule php7_module php7apache2_4.dll(绝对路径)</code><br><img src="/images/loadmodule.png" alt="加载PHP" title="加载PHP"></li>
-<li>在Apache中指定需要PHP解析的文件(以后缀区分)，`Add Type application/x-httpd-php .php .html</li>
+<li>在Apache中指定需要PHP解析的文件(以后缀区分)，<code>Add Type application/x-httpd-php .php .html</code></li>
 <li>PHP虽为Apache打工，但是PHP是独立运行的，如果想让PHP完全服从Apache，需要将PHP的配置文件加载到Apache中：PHPIniDir php.ini文件路径（绝对路径）<br><img src="/images/load_php.png" alt="加载PHP" title="加载php"></li>
 <li>任何Apache配置文件修改（包括已经加载到Apache中的php.ini）都系要重启Apache才能生效：运行Apache-&gt;bin-&gt;ApacheMonitor.exe,然后重启</li>
 <li>改变时区<br><font color="red">注意重启apache服务器才能生效!</font><br><img src="/images/timezone.png" alt="timezone"></li>
