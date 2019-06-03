@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://dingzhen7186.github.io/images/virtualhost.png">
 <meta property="og:image" content="http://dingzhen7186.github.io/images/vhost_pz.png">
-<meta property="og:updated_time" content="2019-04-20T14:53:38.929Z">
+<meta property="og:updated_time" content="2019-05-19T02:48:58.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Apache之安装虚拟主机">
 <meta name="twitter:description" content="安装虚拟主机 Apache为了方便用户开发，也方便服务器对外提供多个网站的访问，提出了虚拟主机的概念。虚拟主机是指在一台计算机上，理论上只能代表一台主机，但是因为需求需要在一台电脑上对外提供多个网站服务，Apache可以通过一定的技术手段（配置），让一台电脑好像拥有多个主机，这个技术称之为虚拟主机。   虚拟主机的分类：Apache虚拟主机根据设定的方式可以共分为两类   基于IP的虚拟主机：一台">
@@ -377,7 +377,7 @@
 </ol>
 <ul>
 <li>基于IP的虚拟主机：一台电脑绑定多个IP（多个网卡，一个网卡一个IP），每个IP针<br>对一个网站</li>
-<li>基于域名的虚拟主机：一台电脑上只有yigeIP，但是通过给不同文件夹命名一个“虚<br>拟”的主机号，一个文件夹对应一个网站。</li>
+<li>基于域名的虚拟主机：一台电脑上只有一个IP，但是通过给不同文件夹命名一个“虚<br>拟”的主机号，一个文件夹对应一个网站。</li>
 </ul>
 <ol start="2">
 <li><p>搭建基于域名的虚拟主机：基于域名的虚拟主机可以在Apache的主配置文件中<br><code>httpd.conf</code>下进行配置，但是Apache为了方便配置文件的管理，将虚拟主机单独形成<br>了一个配置文件叫做<code>httpd-vhosts.conf</code>，在主题配置文件同级目录的extra文件夹下<br> 2.1 在主配置文件夹中开启虚拟主机配置文件的加载（默认关闭的），开启即可</p>
@@ -448,6 +448,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/03/mysql设置时间戳自动获取当前时间/" rel="prev" title="mysql设置时间戳自动获取当前时间">
+                mysql设置时间戳自动获取当前时间 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -529,7 +533,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
