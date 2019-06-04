@@ -98,7 +98,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -236,6 +236,16 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-essay">
+          <a href="/essay/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-essay"></i> <br>
+            
+            随笔
           </a>
         </li>
       
@@ -675,6 +685,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -983,7 +995,7 @@
 
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine@1.3.4/dist/Valine.min.js"></script>
 
 
   <script type="text/javascript">
@@ -996,8 +1008,8 @@
         el: '#comments' ,
         verify: true,
         notify: false,
-        appId: 'WflMHek8VShuRXvLWd99h0za-gzGzoHsz',
-        appKey: 'NLE8kwzjgwTqDqgenaogTjal',
+        appId: 'c1PxUzo12WQynpCmWYb0Dt9y-gzGzoHsz',
+        appKey: 'EsjOtJvijA3Tik82fERp75YS',
         placeholder: '(*^-^*)秀儿，到你发言了！',
         avatar:'wavatar',
         guest_info:['nick','mail','link'],
@@ -1024,6 +1036,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
