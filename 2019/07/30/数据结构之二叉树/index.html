@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -81,18 +81,17 @@
 
 
 
-<meta name="description" content="首先，什么是二分查找呢？它是一种高效率的查找算法，也称折半查找。为什么说效率高呢？让我们举个例子，A同学随便在心里想一个数，然后B同学来猜这个数，如果按照做普通的方法从1~1000便利找的话，最慢的情况会猜1000次，而如果用二分思想的话，不管他想的是什么数，B都能在10次之内猜到。（首先猜500，除了运气特别好直接猜对外不管A说太大还是太小，B都继续把可行范围缩小一半：如果太大，那么答案在1~4">
-<meta name="keywords" content="算法">
+<meta name="description" content="二叉树的链式存储结构MyCode:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分算法理解">
-<meta property="og:url" content="http://dingzhen7186.github.io/2019/03/27/二分算法理解/index.html">
+<meta property="og:title" content="数据结构之二叉树">
+<meta property="og:url" content="http://dingzhen7186.github.io/2019/07/30/数据结构之二叉树/index.html">
 <meta property="og:site_name" content="blog of coderdz">
-<meta property="og:description" content="首先，什么是二分查找呢？它是一种高效率的查找算法，也称折半查找。为什么说效率高呢？让我们举个例子，A同学随便在心里想一个数，然后B同学来猜这个数，如果按照做普通的方法从1~1000便利找的话，最慢的情况会猜1000次，而如果用二分思想的话，不管他想的是什么数，B都能在10次之内猜到。（首先猜500，除了运气特别好直接猜对外不管A说太大还是太小，B都继续把可行范围缩小一半：如果太大，那么答案在1~4">
+<meta property="og:description" content="二叉树的链式存储结构MyCode:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T15:20:17.299Z">
+<meta property="og:updated_time" content="2019-07-31T10:18:36.831Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二分算法理解">
-<meta name="twitter:description" content="首先，什么是二分查找呢？它是一种高效率的查找算法，也称折半查找。为什么说效率高呢？让我们举个例子，A同学随便在心里想一个数，然后B同学来猜这个数，如果按照做普通的方法从1~1000便利找的话，最慢的情况会猜1000次，而如果用二分思想的话，不管他想的是什么数，B都能在10次之内猜到。（首先猜500，除了运气特别好直接猜对外不管A说太大还是太小，B都继续把可行范围缩小一半：如果太大，那么答案在1~4">
+<meta name="twitter:title" content="数据结构之二叉树">
+<meta name="twitter:description" content="二叉树的链式存储结构MyCode:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
 
 
 
@@ -122,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://dingzhen7186.github.io/2019/03/27/二分算法理解/">
+  <link rel="canonical" href="http://dingzhen7186.github.io/2019/07/30/数据结构之二叉树/">
 
 
 
@@ -138,7 +137,7 @@
   </script>
 
 
-  <title>二分算法理解 | blog of coderdz</title>
+  <title>数据结构之二叉树 | blog of coderdz</title>
   
 
 
@@ -296,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/03/27/二分算法理解/">
+    <link itemprop="mainEntityOfPage" href="http://dingzhen7186.github.io/2019/07/30/数据结构之二叉树/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="coderdz">
@@ -313,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二分算法理解</h1>
+          <h1 class="post-title" itemprop="name headline">数据结构之二叉树</h1>
         
 
         <div class="post-meta">
@@ -325,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T13:18:05+08:00">
-                2019-03-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-30T22:39:44+08:00">
+                2019-07-30
               </time>
             
 
@@ -344,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/27/二分算法理解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/27/二分算法理解/" itemprop="commentCount"></span>
+                <a href="/2019/07/30/数据结构之二叉树/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/30/数据结构之二叉树/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -374,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1k
+                  638
                 </span>
               
 
@@ -390,7 +389,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  3
                 </span>
               
             </div>
@@ -411,19 +410,9 @@
       
 
       
-        <p>首先，什么是<strong>二分查找</strong>呢？它是一种<strong>高效率</strong>的<strong>查找算法</strong>，也称<strong>折半查找</strong>。为什么说效率高呢？让我们举个例子，A同学随便在心里想一个数，然后B同学来猜这个数，如果按照做普通的方法从1~1000便利找的话，最慢的情况会猜1000次，而如果用二分思想的话，不管他想的是什么数，B都能在10次之内猜到。（首先猜500，除了运气特别好直接猜对外不管A说太大还是太小，B都继续把可行范围缩小一半：如果太大，那么答案在1~499之间，如果太小，则在501~1000之间。只要每次选择可行区间的中点去猜，每次都能把范围缩小一半。由于log2(1000)&lt;10，10次之内一定能猜到）<br>二分查找的重要条件：<strong>要查找的序列一定是单调的</strong>！<br>递归算法举例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int binarySearch(int a[],int l,int r,int key)&#123;</span><br><span class="line">	if (l&lt;=r)&#123;</span><br><span class="line">		int mid=(l+r)&gt;&gt;1;</span><br><span class="line">		if (a[mid]==key) return mid;</span><br><span class="line">		else if (a[mid]&gt;key) return binarySearch(a,l,mid-1,key);</span><br><span class="line">		else return binarySearch(a,mid+1,r,key);</span><br><span class="line">	&#125;</span><br><span class="line">	return -1;	//没有找到返回-1</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int a[5]=&#123;1,3,5,6,7&#125;;</span><br><span class="line">	cout&lt;&lt;binarySearch(a,0,4,5)&lt;&lt;endl;//找到5的序号为2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>迭代实现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int binarySearch(int a[],int l,int r,int key)&#123;</span><br><span class="line">	 while(l&lt;=r)&#123;</span><br><span class="line">		int mid=(l+r)&gt;&gt;1;</span><br><span class="line">		if (a[mid]==key) return mid;</span><br><span class="line">		else if (a[mid]&gt;key) r=mid-1;</span><br><span class="line">		else l=mid+1;</span><br><span class="line">	&#125;</span><br><span class="line">	return -1;	//没有找到返回-1</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int a[5]=&#123;1,3,5,6,7&#125;;</span><br><span class="line">	cout&lt;&lt;binarySearch(a,0,4,7)&lt;&lt;endl;//找到7的序号为4</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>尽管能用递归实现，但一般都<strong>不用</strong>递归形式的二分写法。<br>下面介绍一种c++STL函数库里的二分，<strong>lower_bound()</strong>,<strong>upper_bound()</strong>和<strong>binary_search</strong>().（STL里的各种数据结构真的是很实用，建议各位花些功夫学好这些）</p>
-<p>binary_search():函数模板 ：binary_search(arr[],  arr[]+size  ,  indx)。<br>参数说明：arr[]:数组首地址。<br>                size:数组元素个数。<br>                index:需要查找的值。<br>函数功能：  在数组中以二分法检索的方式查找，若在数组(要求数组元素非递减)中查找到indx元素则返回1，若查找不到则返回值为0。<br>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int a[5]=&#123;1,3,5,6,7&#125;;</span><br><span class="line">	cout&lt;&lt;binary_search(a,a+5,6)&lt;&lt;endl;</span><br><span class="line">    //找到6，返回1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>lower_bound() :函数功能：  函数lower_bound()在first和last中的前闭后开区间进行二分查找，返回大于或等于val的第一个元素位置。如果所有元素都小于val，则返回last的位置。</p>
-<p>upper_bound():<br>函数功能：函数upper_bound()返回的在前闭后开区间查找的关键字的上界，返回大于val的第一个元素位置。<br>示<br>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int a[10]=&#123;1,3,3,5,6,7,7,8,10,12&#125;;</span><br><span class="line">	cout&lt;&lt;lower_bound(a,a+10,3)-a&lt;&lt;&apos; &apos;;</span><br><span class="line">	cout&lt;&lt;upper_bound(a,a+10,3)-a&lt;&lt;&apos; &apos;;</span><br><span class="line">	cout&lt;&lt;lower_bound(a,a+10,7)-a&lt;&lt;&apos; &apos;;</span><br><span class="line">	cout&lt;&lt;upper_bound(a,a+10,7)-a&lt;&lt;&apos; &apos;;</span><br><span class="line">&#125;</span><br><span class="line">//输出:1 3 5 7</span><br></pre></td></tr></table></figure>
-<p>二分原理易懂然而也要在刷题中慢慢提升自己对二分的理解</p>
-<p>下面附上一道题吧</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/*问是否有x满足这个等式： 8x^4 + 7x^3 + 2x^2 + 3x + 6 == Y,x属于[0,100]，可以为分数</span><br><span class="line">，保留四位小数</span><br><span class="line">*/</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int calculate(int x)</span><br><span class="line">&#123;</span><br><span class="line">    return 8*x*x*x*x+7*x*x*x+2*x*x+3*x+6;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int y;</span><br><span class="line">    double high=100,low=0,mid;</span><br><span class="line">    while(cin&gt;&gt;y)</span><br><span class="line">    &#123;</span><br><span class="line">        while(low-high&lt;1.0e-6)            / /循环至high，low近乎相等</span><br><span class="line">        &#123;</span><br><span class="line">            mid=(high+low)/2;</span><br><span class="line">            if(calculate(mid)&lt;y)</span><br><span class="line">                low=mid;</span><br><span class="line">            else</span><br><span class="line">                high=mid;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;%.4lf\n&quot;,high);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="二叉树的链式存储结构"><a href="#二叉树的链式存储结构" class="headerlink" title="二叉树的链式存储结构"></a>二叉树的链式存储结构</h2><p>MyCode:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstdlib&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef int ElemType;</span><br><span class="line"></span><br><span class="line">typedef struct BiTNode&#123;</span><br><span class="line">	ElemType data;</span><br><span class="line">	struct BiTNode *lchild, *rchild;</span><br><span class="line">&#125;BiTNode, *BiTree;</span><br><span class="line"></span><br><span class="line">int CreateBiTree(BiTree &amp;T)&#123;</span><br><span class="line">	ElemType ch;</span><br><span class="line">	ElemType t;</span><br><span class="line">	scanf(&quot;%d&quot;, &amp;ch);</span><br><span class="line">	t = getchar();</span><br><span class="line">	if (ch == -1)&#123;	//输入-1表示叶子结点</span><br><span class="line">		T = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else&#123;</span><br><span class="line">		T = (BiTree)malloc(sizeof(BiTNode));</span><br><span class="line">		if (!T ) exit(-1);</span><br><span class="line">		T-&gt;data = ch;</span><br><span class="line">		printf(&quot;输入%d的左子结点: &quot;, ch);</span><br><span class="line">		CreateBiTree(T-&gt;lchild);</span><br><span class="line">		printf(&quot;输入%d的右子结点: &quot;, ch);</span><br><span class="line">		CreateBiTree(T-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//先序遍历二叉树</span><br><span class="line">void TraverseBiTree(BiTree T)&#123;</span><br><span class="line">	if (T == NULL) return;</span><br><span class="line">	printf(&quot;%d &quot;, T-&gt;data);</span><br><span class="line">	TraverseBiTree(T-&gt;lchild);</span><br><span class="line">	TraverseBiTree(T-&gt;rchild);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//中序遍历二叉树</span><br><span class="line">void InOrderBiTree(BiTree T)&#123;</span><br><span class="line">	if (T == NULL) return ;</span><br><span class="line">	InOrderBiTree(T-&gt;lchild);</span><br><span class="line">	printf(&quot;%d &quot;, T-&gt;data);</span><br><span class="line">	InOrderBiTree(T-&gt;rchild);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//后序遍历二叉树</span><br><span class="line">void PostOrderBiTree(BiTree T)&#123;</span><br><span class="line">	if (T == NULL) return ;</span><br><span class="line">	PostOrderBiTree(T-&gt;lchild);</span><br><span class="line">	PostOrderBiTree(T-&gt;rchild);</span><br><span class="line">	printf(&quot;%d &quot;, T-&gt;data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//二叉树的深度</span><br><span class="line">int TreeDepth(BiTree T)&#123;</span><br><span class="line">	int depth = 0;</span><br><span class="line">	if (T)&#123;</span><br><span class="line">		int leftdepth = TreeDepth(T-&gt;lchild);</span><br><span class="line">		int rightdepth = TreeDepth(T-&gt;rchild);</span><br><span class="line">		depth = leftdepth &gt;= rightdepth ? leftdepth+1 : rightdepth+1; </span><br><span class="line">	&#125;</span><br><span class="line">	return depth;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//求二叉树叶子结点个数</span><br><span class="line">int LeafCount(BiTree T, int &amp;num)&#123;</span><br><span class="line">	if (T)&#123;</span><br><span class="line">		if (T-&gt;lchild == NULL &amp;&amp; T-&gt;rchild == NULL )</span><br><span class="line">			num++;</span><br><span class="line">		LeafCount(T-&gt;lchild, num);</span><br><span class="line">		LeafCount(T-&gt;rchild, num);</span><br><span class="line">	&#125;</span><br><span class="line">	return num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">	BiTree T;</span><br><span class="line">	int depth, num = 0;</span><br><span class="line">	printf(&quot;请输入第一个结点的值，-1表示没有叶节点：\n&quot;);</span><br><span class="line">	CreateBiTree(T);</span><br><span class="line">	printf(&quot;先序遍历二叉树:\n&quot;);</span><br><span class="line">	TraverseBiTree(T);</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">	printf(&quot;中序遍历二叉树:\n&quot;);</span><br><span class="line">	InOrderBiTree(T);</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">	printf(&quot;后序遍历二叉树\n&quot;);</span><br><span class="line">	PostOrderBiTree(T);</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">	depth = TreeDepth(T);</span><br><span class="line">	printf(&quot;树的深度为：%d\n&quot;, depth);</span><br><span class="line">	LeafCount(T, num);</span><br><span class="line">	printf(&quot;树的叶子结点个数为：%d\n&quot;, num);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>运行结果:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">请输入第一个结点的值，-1表示没有叶节点：</span><br><span class="line">1</span><br><span class="line">输入1的左子结点: 2</span><br><span class="line">输入2的左子结点: 3</span><br><span class="line">输入3的左子结点: -1</span><br><span class="line">输入3的右子结点: -1</span><br><span class="line">输入2的右子结点: 4</span><br><span class="line">输入4的左子结点: 5</span><br><span class="line">输入5的左子结点: -1</span><br><span class="line">输入5的右子结点: 7</span><br><span class="line">输入7的左子结点: -1</span><br><span class="line">输入7的右子结点: -1</span><br><span class="line">输入4的右子结点: 6</span><br><span class="line">输入6的左子结点: -1</span><br><span class="line">输入6的右子结点: -1</span><br><span class="line">输入1的右子结点: -1</span><br><span class="line">先序遍历二叉树:</span><br><span class="line">1 2 3 4 5 7 6</span><br><span class="line">中序遍历二叉树:</span><br><span class="line">3 2 5 7 4 6 1</span><br><span class="line">后序遍历二叉树</span><br><span class="line">3 7 5 6 4 2 1</span><br><span class="line">树的深度为：5</span><br><span class="line">树的叶子结点个数为：3</span><br><span class="line">Hit any key to close this window...</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -474,12 +463,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
-          
-        </div>
-      
 
       
       
@@ -489,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/22/my-first-blog-article/" rel="next" title="my first blog article">
-                <i class="fa fa-chevron-left"></i> my first blog article
+              <a href="/2019/07/25/数据结构之队列/" rel="next" title="数据结构之队列">
+                <i class="fa fa-chevron-left"></i> 数据结构之队列
               </a>
             
           </div>
@@ -498,10 +481,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/27/C-的输入输出与C的输入输出比较/" rel="prev" title="C++的输入输出与C的输入输出比较">
-                C++的输入输出与C的输入输出比较 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -558,8 +537,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -649,6 +637,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的链式存储结构"><span class="nav-number">1.</span> <span class="nav-text">二叉树的链式存储结构</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
 	  <div>
